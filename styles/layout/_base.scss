@@ -1,0 +1,125 @@
+@import "../abstract/mixins";
+@import "../abstract/variables";
+@import "../abstract/breakpoint";
+
+* {
+  font-family: $font-primary;
+  outline: none !important;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  color: #3e3e3e;
+}
+
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-dark-gray {
+  color: $color-dark-gray !important;
+}
+
+.text-md {
+  @include font(25px, 400);
+  @include clear-spacing;
+}
+
+.text-sm {
+  @include font(16px, $fw-light);
+  @include clear-spacing;
+}
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.left-arrow-bg {
+  position: absolute;
+  left: 0;
+  top: 720px;
+  z-index: -1;
+}
+
+.right-arrow-bg {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  z-index: -1;
+}
+
+.modal {
+  .modal-content {
+    @include simple-shadow;
+    border-radius: 10px;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-dialog {
+    &.modal-lg,
+    &.modal-xl {
+      @include media-breakpoint-down(lg) {
+        max-width: 100% !important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  background-color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+button,
+.button-hover {
+  transition: 300ms;
+
+  &:hover {
+    transition: 300ms;
+    filter: brightness(115%);
+  }
+}
+
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input,
+textarea {
+  &::-webkit-input-placeholder {
+    color: $color-placeholder;
+    font-weight: $fw-light;
+  }
+  &:-moz-placeholder {
+    color: $color-placeholder;
+    font-weight: $fw-light;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $color-placeholder;
+    font-weight: $fw-light;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $color-placeholder;
+    font-weight: $fw-light;
+  }
+  &::-ms-input-placeholder {
+    color: $color-placeholder;
+    font-weight: $fw-light;
+  }
+
+  &::placeholder {
+    color: $color-placeholder;
+    font-weight: $fw-light;
+  }
+}
