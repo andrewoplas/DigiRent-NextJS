@@ -1,8 +1,8 @@
-@import "./abstract/variables";
-@import "./abstract/mixins";
-@import "./abstract/breakpoint";
+@import './abstract/variables';
+@import './abstract/mixins';
+@import './abstract/breakpoint';
 
-.layout-content {
+.layout-content.payments-landlord {
   padding-top: 7px;
   padding-bottom: 400px;
 

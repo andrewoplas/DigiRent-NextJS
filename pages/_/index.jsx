@@ -1,3 +1,5 @@
 import PageWrapper from 'widgets/PageWrapper';
 
-export default () => <PageWrapper title="DigiRent - ***" pageName="**"></PageWrapper>;
+const Page = () => <PageWrapper title="DigiRent - ***" pageName="**"></PageWrapper>;
+
+export default Page;

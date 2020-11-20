@@ -4,7 +4,7 @@ import Footer from 'widgets/Footer';
 import Header from 'widgets/Header';
 
 const index = ({ title, pageName, children }) => (
-  <div className="layout-content">
+  <div className="page-wrapper">
     <Head>
       <title>{title}</title>
     </Head>
