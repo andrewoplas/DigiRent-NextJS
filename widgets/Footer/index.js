@@ -1,144 +1,189 @@
-const index = () => {
-	return (
-		<footer className="layout-footer">
-			<div className="subscriber-bg">
-				<img src="/images/subscriber-bg.svg" alt="subscriber" />
-			</div>
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Link from 'next/link';
 
-			<div className="subscriber">
-				<div className="logo">
-					<h1 className="text">DIGI RENT</h1>
-				</div>
-				<p className="subscriber-title">
-					<span className="text-primary font-weight-bold">subscribe</span>{' '}
-					<br className="d-block d-sm-none" />
-					to receive our news
-				</p>
-				<div className="subscriber-form">
-					<input placeholder="e-mail" />
-					<button>
-						<img
-							src="/images/icon/icon-email-outline.svg"
-							className="icon"
-							alt="facebook"
-							width={20}
-							height={20}
-						/>
-					</button>
-				</div>
-			</div>
+const index = () => (
+  <footer className="layout-footer">
+    <div className="subscriber-bg">
+      <img src="/images/subscriber-bg.svg" alt="subscriber" />
+    </div>
 
-			<div className="social-medias">
-				<div className="icons">
-					<a href="#">
-						<img
-							src="/images/social-media/facebook.svg"
-							className="icon"
-							alt="facebook"
-							width={40}
-							height={40}
-						/>
-					</a>
-					<a href="#">
-						<img
-							src="/images/social-media/instagram.svg"
-							className="icon"
-							alt="instagram"
-							width={40}
-							height={40}
-						/>
-					</a>
-					<a href="#">
-						<img
-							src="/images/social-media/linkedin.svg"
-							className="icon"
-							alt="linkedin"
-							width={40}
-							height={40}
-						/>
-					</a>
-					<a href="#">
-						<img
-							src="/images/social-media/youtube.svg"
-							className="icon"
-							alt="youtube"
-							width={40}
-							height={40}
-						/>
-					</a>
-					<a href="#">
-						<img
-							src="/images/icon/icon-link.svg"
-							className="icon-link"
-							alt="link"
-							width={40}
-							height={40}
-						/>
-					</a>
-				</div>
-			</div>
+    <div className="subscriber">
+      <div className="logo">
+        <h1 className="text">DIGI RENT</h1>
+      </div>
+      <p className="subscriber-title">
+        <span className="text-primary font-weight-bold">subscribe</span>{' '}
+        <br className="d-block d-sm-none" />
+        to receive our news
+      </p>
+      <div className="subscriber-form">
+        <input placeholder="e-mail" />
+        <button type="button">
+          <img
+            src="/images/icon/icon-email-outline.svg"
+            className="icon"
+            alt="facebook"
+            width={20}
+            height={20}
+          />
+        </button>
+      </div>
+    </div>
 
-			<hr />
+    <div className="social-medias">
+      <div className="icons">
+        <a href="#">
+          <img
+            src="/images/social-media/facebook.svg"
+            className="icon"
+            alt="facebook"
+            width={40}
+            height={40}
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/images/social-media/instagram.svg"
+            className="icon"
+            alt="instagram"
+            width={40}
+            height={40}
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/images/social-media/linkedin.svg"
+            className="icon"
+            alt="linkedin"
+            width={40}
+            height={40}
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/images/social-media/youtube.svg"
+            className="icon"
+            alt="youtube"
+            width={40}
+            height={40}
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/images/icon/icon-link.svg"
+            className="icon-link"
+            alt="link"
+            width={40}
+            height={40}
+          />
+        </a>
+      </div>
+    </div>
 
-			<div className="footer-main">
-				<div className="container">
-					<div className="row">
-						<div className="col-6 col-md-4 col-lg header-column">
-							<h3>Cities</h3>
-							<div className="list">
-								<a href="#">Amsterdam</a>
-								<a href="#">Den Haag</a>
-								<a href="#">Rotterdam</a>
-								<a href="#">Eindhoven</a>
-								<a href="#">Utrecht</a>
-								<a href="#">Arnhem</a>
-							</div>
-						</div>
-						<div className="col-6 col-md-4 col-lg header-column">
-							<h3>Digi Rent</h3>
-							<div className="list">
-								<a href="about.html">About Us</a>
-								<a href="media.html">Media</a>
-								<a href="extra-information.html">Terms &amp; Conditions</a>
-								<a href="extra-information.html#data-security">Data Security</a>
-								<a href="extra-information.html#cookies">Cookie Policy</a>
-								<a href="sitemap.html">Sitemap</a>
-							</div>
-						</div>
-						<div className="col-6 col-md-4 col-lg header-column">
-							<h3>Tenants</h3>
-							<div className="list">
-								<a href="#">How to rent</a>
-								<a href="pricing.html">Pricing</a>
-								<a href="international-students-expats.html">Blog for internationals</a>
-								<a href="rental-tips.html#tenants">Rental Tips</a>
-							</div>
-						</div>
-						<div className="col-6 col-md-4 col-lg header-column">
-							<h3>Landlords</h3>
-							<div className="list">
-								<a href="#">How to rent out</a>
-								<a href="pricing.html">Pricing</a>
-								<a href="rental-tips.html#landlords">Rental Tips</a>
-							</div>
-						</div>
-						<div className="col-6 col-md-4 col-lg header-column">
-							<h3>Support</h3>
-							<div className="list">
-								<a href="faq.html">FAQ</a>
-								<a href="contact.html">Contact Us</a>
-								<a href="#">Careers</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+    <hr />
 
-			<hr />
+    <div className="footer-main">
+      <div className="container">
+        <div className="row">
+          <div className="col-6 col-md-4 col-lg header-column">
+            <h3>Cities</h3>
+            <div className="list">
+              <Link href="#">
+                <a>Amsterdam</a>
+              </Link>
+              <Link href="#">
+                <a>Den Haag</a>
+              </Link>
+              <Link href="#">
+                <a>Rotterdam</a>
+              </Link>
+              <Link href="#">
+                <a>Eindhoven</a>
+              </Link>
+              <Link href="#">
+                <a>Utrecht</a>
+              </Link>
+              <Link href="#">
+                <a>Arnhem</a>
+              </Link>
+            </div>
+          </div>
+          <div className="col-6 col-md-4 col-lg header-column">
+            <h3>Digi Rent</h3>
+            <div className="list">
+              <Link href="about">
+                <a>About Us</a>
+              </Link>
+              <Link href="media">
+                <a>Media</a>
+              </Link>
+              <Link href="extra-information">
+                <a>Terms &amp; Conditions</a>
+              </Link>
+              <Link href="extra-information#data-security">
+                <a>Data Security</a>
+              </Link>
+              <Link href="extra-information#cookies">
+                <a>Cookie Policy</a>
+              </Link>
+              <Link href="sitemap">
+                <a>Sitemap</a>
+              </Link>
+            </div>
+          </div>
+          <div className="col-6 col-md-4 col-lg header-column">
+            <h3>Tenants</h3>
+            <div className="list">
+              <Link href="#">
+                <a>How to rent</a>
+              </Link>
+              <Link href="pricing">
+                <a>Pricing</a>
+              </Link>
+              <Link href="international-students-expats">
+                <a>Blog for internationals</a>
+              </Link>
+              <Link href="rental-tips#tenants">
+                <a>Rental Tips</a>
+              </Link>
+            </div>
+          </div>
+          <div className="col-6 col-md-4 col-lg header-column">
+            <h3>Landlords</h3>
+            <div className="list">
+              <Link href="#">
+                <a>How to rent out</a>
+              </Link>
+              <Link href="pricing">
+                <a>Pricing</a>
+              </Link>
+              <Link href="rental-tips#landlords">
+                <a>Rental Tips</a>
+              </Link>
+            </div>
+          </div>
+          <div className="col-6 col-md-4 col-lg header-column">
+            <h3>Support</h3>
+            <div className="list">
+              <Link href="faq">
+                <a>FAQ</a>
+              </Link>
+              <Link href="contact">
+                <a>Contact Us</a>
+              </Link>
+              <Link href="#">
+                <a>Careers</a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			<p className="copyright">Copyright 2020. All rights reserved</p>
-		</footer>
-	);
-};
+    <hr />
+
+    <p className="copyright">Copyright 2020. All rights reserved</p>
+  </footer>
+);
 
 export default index;

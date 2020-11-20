@@ -1,7 +1,7 @@
 {
 	"bracketSpacing": true,
 	"printWidth": 100,
-	"useTabs": true,
+	"useTabs": false,
 	"semi": true,
 	"singleQuote": true,
 	"trailingComma": "all",
@@ -10,7 +10,7 @@
 		{
 			"files": ["*.css", "*.scss", ".prettierrc"],
 			"options": {
-				"tabWidth": 1
+				"tabWidth": 2
 			}
 		},
 		{

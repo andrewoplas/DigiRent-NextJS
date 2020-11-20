@@ -1,8 +1,8 @@
-@import "./abstract/variables";
-@import "./abstract/mixins";
-@import "./abstract/breakpoint";
+@import './abstract/variables';
+@import './abstract/mixins';
+@import './abstract/breakpoint';
 
-.layout-content {
+.layout-content.extra-information {
   padding-top: 7px;
   padding-bottom: 400px;
 
@@ -116,7 +116,7 @@
         list-style: none;
 
         li p::before {
-          content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
           color: $color-primary; /* Change the color */
           font-weight: bold; /* If you want it to be bold */
           display: inline-block; /* Needed to add space between the bullet and the text */
