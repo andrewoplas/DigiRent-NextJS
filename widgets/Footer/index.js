@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
+import { rentalTipsType } from 'shared/types';
 
 const index = () => (
   <footer className="layout-footer">
@@ -12,7 +13,7 @@ const index = () => (
         <h1 className="text">DIGI RENT</h1>
       </div>
       <p className="subscriber-title">
-        <span className="text-primary font-weight-bold">subscribe</span>{' '}
+        <span className="text-primary font-weight-bold">subscribe</span>
         <br className="d-block d-sm-none" />
         to receive our news
       </p>
@@ -143,7 +144,7 @@ const index = () => (
               <Link href="international-students-expats">
                 <a>Blog for internationals</a>
               </Link>
-              <Link href="rental-tips#tenants">
+              <Link href={`rental-tips#${rentalTipsType.TENANT}`}>
                 <a>Rental Tips</a>
               </Link>
             </div>
@@ -157,7 +158,7 @@ const index = () => (
               <Link href="pricing">
                 <a>Pricing</a>
               </Link>
-              <Link href="rental-tips#landlords">
+              <Link href={`rental-tips#${rentalTipsType.LANDLORD}`}>
                 <a>Rental Tips</a>
               </Link>
             </div>

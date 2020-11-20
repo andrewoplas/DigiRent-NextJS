@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import PageWrapper from 'widgets/PageWrapper';
 import Link from 'next/link';
+import { rentalTipsType } from 'shared/types';
 
-export default () => (
+const Page = () => (
   <PageWrapper title="DigiRent - Sitemap" pageName="sitemap">
     <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
     <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
@@ -55,7 +56,7 @@ export default () => (
         <Link href="international-students-expats">
           <a>Blog for internationals</a>
         </Link>
-        <Link href="#">
+        <Link href={`rental-tips#${rentalTipsType.TENANT}`}>
           <a>Rental Tips</a>
         </Link>
         <Link href="#">
@@ -64,7 +65,7 @@ export default () => (
         <Link href="pricing">
           <a>Pricing</a>
         </Link>
-        <Link href="#">
+        <Link href={`rental-tips#${rentalTipsType.TENANT}`}>
           <a>Rental Tips</a>
         </Link>
         <Link href="faq">
@@ -80,3 +81,5 @@ export default () => (
     </div>
   </PageWrapper>
 );
+
+export default Page;

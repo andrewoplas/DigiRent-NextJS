@@ -1,6 +1,6 @@
 import PageWrapper from 'widgets/PageWrapper';
 
-export default () => (
+const Page = () => (
   <PageWrapper title="DigiRent - Extra Information" pageName="extra-information">
     <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
     <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
@@ -172,3 +172,5 @@ export default () => (
     </div>
   </PageWrapper>
 );
+
+export default Page;

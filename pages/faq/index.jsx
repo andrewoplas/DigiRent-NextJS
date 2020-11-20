@@ -36,7 +36,7 @@ const data = [
   },
 ];
 
-export default () => {
+const Page = () => {
   const [faqModalVisible, setFaqModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -130,3 +130,5 @@ export default () => {
     </>
   );
 };
+
+export default Page;

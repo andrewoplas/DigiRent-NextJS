@@ -9,7 +9,7 @@ const data = [
   { image: '/images/house-sample-3.jpg', description: 'Sample' },
 ];
 
-export default () => (
+const Page = () => (
   <PageWrapper title="DigiRent - Media" pageName="media">
     <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
     <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
@@ -86,3 +86,5 @@ export default () => (
     </div>
   </PageWrapper>
 );
+
+export default Page;

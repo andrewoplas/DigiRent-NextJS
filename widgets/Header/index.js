@@ -1,4 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import Link from 'next/link';
+
 const index = () => (
   <>
     <section className="layout-header">
@@ -19,21 +21,21 @@ const index = () => (
           </div>
 
           <div className="main-menu">
-            <a href="#" className="px-2 uppercase text-white">
-              Properties
-            </a>
+            <Link href="#">
+              <a className="px-2 uppercase text-white">Properties</a>
+            </Link>
             <span>|</span>
-            <a href="messages.html" className="px-2 uppercase text-white">
-              Messages
-            </a>
+            <Link href="messages">
+              <a className="px-2 uppercase text-white">Messages</a>
+            </Link>
             <span>|</span>
-            <a href="payments-landlord.html" className="px-2 uppercase text-white">
-              Payments
-            </a>
+            <Link href="payments-landlord">
+              <a className="px-2 uppercase text-white">Payments</a>
+            </Link>
             <span>|</span>
-            <a href="contracts-landlord.html" className="px-2 uppercase text-white">
-              Contracts
-            </a>
+            <Link href="contracts-landlord">
+              <a className="px-2 uppercase text-white">Contracts</a>
+            </Link>
           </div>
         </div>
       </div>

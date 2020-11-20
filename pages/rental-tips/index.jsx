@@ -2,9 +2,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/prop-types */
 
-import PageWrapper from 'widgets/PageWrapper';
-import Slider from 'react-slick';
 import cn from 'classnames';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import { rentalTipsType } from 'shared/types';
+import PageWrapper from 'widgets/PageWrapper';
 
 const data = [
   {
@@ -30,13 +34,23 @@ const PrevArrow = ({ onClick }) => (
   </button>
 );
 
-export default () => {
+const Page = () => {
+  const router = useRouter();
+
+  const [hash, setHash] = useState(rentalTipsType.TENANT);
+
   const slickSettings = {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  // Effect: Get hash value
+  useEffect(() => {
+    const hashValue = router.asPath.split('#')?.[1] || rentalTipsType.TENANT;
+    setHash(hashValue);
+  }, [router]);
 
   return (
     <PageWrapper title="DigiRent - Rental Tips" pageName="rental-tips">
@@ -46,40 +60,44 @@ export default () => {
         <h3 className="main-title">RENTAL TIPS</h3>
 
         <div className="selector-buttons">
-          <div className="item for-tenants">
-            <a href="#tenants">
-              <div className="rounded-icon mx-auto">
-                <img
-                  className="icon-inactive"
-                  src="/images/icon/icon-key-gray.svg"
-                  alt="item icon"
-                />
-                <img
-                  className="icon-active"
-                  src="/images/icon/icon-key-primary.svg"
-                  alt="item icon"
-                />
-              </div>
-              <span className="text mt-3 d-block text-center">FOR TENANTS</span>
-            </a>
+          <div className={cn('item for-tenants', { active: hash === rentalTipsType.TENANT })}>
+            <Link href={`#${rentalTipsType.TENANT}`}>
+              <a>
+                <div className="rounded-icon mx-auto">
+                  <img
+                    className="icon-inactive"
+                    src="/images/icon/icon-key-gray.svg"
+                    alt="item icon"
+                  />
+                  <img
+                    className="icon-active"
+                    src="/images/icon/icon-key-primary.svg"
+                    alt="item icon"
+                  />
+                </div>
+                <span className="text mt-3 d-block text-center">FOR TENANTS</span>
+              </a>
+            </Link>
           </div>
 
-          <div className="item for-landlords">
-            <a href="#landlords">
-              <div className="rounded-icon mx-auto">
-                <img
-                  className="icon-inactive"
-                  src="/images/icon/icon-roof-gray.svg"
-                  alt="item icon"
-                />
-                <img
-                  className="icon-active"
-                  src="/images/icon/icon-roof-primary.svg"
-                  alt="item icon"
-                />
-              </div>
-              <span className="text mt-3 d-block text-center">FOR LANDLORDS</span>
-            </a>
+          <div className={cn('item for-landlords', { active: hash === rentalTipsType.LANDLORD })}>
+            <Link href={`#${rentalTipsType.LANDLORD}`}>
+              <a>
+                <div className="rounded-icon mx-auto">
+                  <img
+                    className="icon-inactive"
+                    src="/images/icon/icon-roof-gray.svg"
+                    alt="item icon"
+                  />
+                  <img
+                    className="icon-active"
+                    src="/images/icon/icon-roof-primary.svg"
+                    alt="item icon"
+                  />
+                </div>
+                <span className="text mt-3 d-block text-center">FOR LANDLORDS</span>
+              </a>
+            </Link>
           </div>
         </div>
 
@@ -177,3 +195,5 @@ export default () => {
     </PageWrapper>
   );
 };
+
+export default Page;
