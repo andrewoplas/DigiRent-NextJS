@@ -1,6 +1,4 @@
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/prop-types */
 
 import cn from 'classnames';
 import Link from 'next/link';
@@ -9,6 +7,8 @@ import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import { rentalTipsType } from 'shared/types';
 import PageWrapper from 'widgets/PageWrapper';
+import { Reaction } from 'widgets/Reaction';
+import { SocialMedias } from 'widgets/SocialMedias';
 
 const data = [
   {
@@ -38,6 +38,7 @@ const Page = () => {
   const router = useRouter();
 
   const [hash, setHash] = useState(rentalTipsType.TENANT);
+  const [reaction, setReaction] = useState(null);
 
   const slickSettings = {
     nextArrow: <NextArrow />,
@@ -51,6 +52,13 @@ const Page = () => {
     const hashValue = router.asPath.split('#')?.[1] || rentalTipsType.TENANT;
     setHash(hashValue);
   }, [router]);
+
+  const onReact = (value, id) => {
+    setReaction((reactions) => ({
+      ...reactions,
+      [id]: value,
+    }));
+  };
 
   return (
     <PageWrapper title="DigiRent - Rental Tips" pageName="rental-tips">
@@ -106,52 +114,7 @@ const Page = () => {
             <div className="item" key={item.id}>
               <span className="number">{item.id}</span>
 
-              <div className="social-medias-wrapper">
-                <div className="rounded-icon small icon-share">
-                  <div className="active-icon" />
-                  <img
-                    className="inactive-icon"
-                    src="/images/icon/icon-share-gray.svg"
-                    alt="icon share"
-                  />
-                </div>
-
-                <div className="social-medias">
-                  <div className="icons">
-                    <a href="#">
-                      <img
-                        src="/images/social-media/facebook.svg"
-                        className="icon"
-                        alt="facebook"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="/images/social-media/instagram.svg"
-                        className="icon"
-                        alt="instagram"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="/images/social-media/linkedin.svg"
-                        className="icon"
-                        alt="linkedin"
-                      />
-                    </a>
-                    <a href="#">
-                      <img src="/images/social-media/youtube.svg" className="icon" alt="youtube" />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="/images/icon/icon-link.svg"
-                        className="icon icon-link"
-                        alt="icon link"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <SocialMedias />
 
               <div className="main-box wrapper">
                 <div className="top-background" />
@@ -169,24 +132,13 @@ const Page = () => {
                   ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
 
-                <div className="reaction no-shadow mt-5">
-                  <div className="item rounded-icon small mx-1">
-                    <img
-                      data-type="like"
-                      src="/images/icon/icon-like.svg"
-                      className="icon-like"
-                      alt="item icon"
-                    />
-                  </div>
-                  <div className="item rounded-icon small mx-1">
-                    <img
-                      data-type="dislike"
-                      src="/images/icon/icon-dislike.svg"
-                      className="icon-dislike"
-                      alt="item icon"
-                    />
-                  </div>
-                </div>
+                <Reaction
+                  reaction={reaction?.[item.id]}
+                  onReact={(value) => onReact(value, item.id)}
+                  classNames="no-shadow mt-5"
+                  likeIconClassNames="mx-1"
+                  dislikeIconClassNames="mx-1"
+                />
               </div>
             </div>
           ))}

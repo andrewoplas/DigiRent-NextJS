@@ -1,16 +1,23 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import cn from 'classnames';
+import { Select } from 'components/Select';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { moveInScenarioTypes } from 'shared/types';
 import PageWrapper from 'widgets/PageWrapper';
+
+const typeOptions = [
+  { name: 'Type 1', value: 1 },
+  { name: 'Type 2', value: 2 },
+  { name: 'Type 3', value: 3 },
+  { name: 'Type 4', value: 4 },
+];
 
 const Page = () => {
   const [selectedScenario, setSelectedScenario] = useState(moveInScenarioTypes.NO_NEED);
   const [signedDocumentModalVisible, setSignedDocumentModalVisible] = useState(false);
   const [confirmationModalVisible, setConfirmationModalVisible] = useState(false);
   const [viewDocumentVisible, setViewDocumentVisible] = useState(false);
+  const [type, setType] = useState(null);
 
   const onShowDocumentModal = () => setSignedDocumentModalVisible(true);
   const onCloseDocumentModal = () => setSignedDocumentModalVisible(false);
@@ -308,18 +315,12 @@ const Page = () => {
                 <div className="col-12 col-lg-6">
                   <div className="d-flex align-items-center left">
                     <span className="text-primary mr-4">Upload Document</span>
-                    <div className="field-group-select select">
-                      <span className="value">Type document</span>
-                      <button type="button" className="btn-dropdown">
-                        <img src="/images/icon/icon-caret-down-white.svg" alt="item icon" />
-                      </button>
-                      <div className="choices">
-                        <div className="item">Type 1</div>
-                        <div className="item">Type 2</div>
-                        <div className="item">Type 3</div>
-                        <div className="item">Type 4</div>
-                      </div>
-                    </div>
+                    <Select
+                      value={type}
+                      onChange={(value) => setType(value)}
+                      options={typeOptions}
+                      placeholder="Type"
+                    />
                   </div>
                 </div>
                 <div className="col-12 col-lg-6 mt-3 mt-lg-0">

@@ -1,10 +1,19 @@
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import PageWrapper from 'widgets/PageWrapper';
+import { Select } from 'components/Select';
+
+const yearOptions = [
+  { name: 'YEAR 2021', value: 2021 },
+  { name: 'YEAR 2022', value: 2022 },
+  { name: 'YEAR 2023', value: 2023 },
+  { name: 'YEAR 2024', value: 2024 },
+];
 
 const Page = () => {
   const [keysModalVisible, setKeysModalVisible] = useState(false);
   const [makePaymentModalVisible, setMakePaymentModalVisible] = useState(false);
+  const [year, setYear] = useState(null);
 
   const onShowKeysModal = () => setKeysModalVisible(true);
   const onCloseKeysModal = () => setKeysModalVisible(false);
@@ -83,18 +92,13 @@ const Page = () => {
           <div className="sort">
             <p className="main-desc mr-4">Sort by:</p>
 
-            <div className="field-group-select select primary">
-              <span className="value">YEAR</span>
-              <button type="button" className="btn-dropdown">
-                <img src="/images/icon/icon-caret-down-white.svg" alt="item icon" />
-              </button>
-              <div className="choices">
-                <div className="item">YEAR 2021</div>
-                <div className="item">YEAR 2022</div>
-                <div className="item">YEAR 2023</div>
-                <div className="item">YEAR 2024</div>
-              </div>
-            </div>
+            <Select
+              classNames="primary"
+              value={year}
+              onChange={(value) => setYear(value)}
+              options={yearOptions}
+              placeholder="YEAR"
+            />
           </div>
 
           <div className="monthly-payments">

@@ -1,7 +1,7 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useState } from 'react';
 import PageWrapper from 'widgets/PageWrapper';
+import { Reaction } from 'widgets/Reaction';
+import { SocialMedias } from 'widgets/SocialMedias';
 import Modal from 'react-bootstrap/Modal';
 
 const archives = [
@@ -37,6 +37,7 @@ const recentBlogs = [
 
 const Page = () => {
   const [blogModalVisible, setBlogModalVisible] = useState(false);
+  const [reaction, setReaction] = useState(null);
 
   const onShow = () => setBlogModalVisible(true);
 
@@ -52,56 +53,7 @@ const Page = () => {
             <div className="col-12 col-lg-8">
               <div className="main-box blog-content-wrapper pb-5">
                 <div className="blog-header">
-                  <div className="social-medias-wrapper">
-                    <div className="rounded-icon small icon-share">
-                      <div className="active-icon" />
-                      <img
-                        className="inactive-icon"
-                        src="/images/icon/icon-share-gray.svg"
-                        alt="item icon"
-                      />
-                    </div>
-
-                    <div className="social-medias">
-                      <div className="icons">
-                        <a href="#">
-                          <img
-                            src="/images/social-media/facebook.svg"
-                            className="icon"
-                            alt="facebook"
-                          />
-                        </a>
-                        <a href="#">
-                          <img
-                            src="/images/social-media/instagram.svg"
-                            className="icon"
-                            alt="instagram"
-                          />
-                        </a>
-                        <a href="#">
-                          <img
-                            src="/images/social-media/linkedin.svg"
-                            className="icon"
-                            alt="linkedin"
-                          />
-                        </a>
-                        <a href="#">
-                          <img
-                            src="/images/social-media/youtube.svg"
-                            className="icon"
-                            alt="youtube"
-                          />
-                        </a>
-                        <a href="#">
-                          <img
-                            src="/images/icon/icon-link.svg"
-                            className="icon icon-link"
-                            alt="icon link"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  <SocialMedias />
 
                   <div className="statistics">
                     <div className="item">
@@ -212,24 +164,13 @@ const Page = () => {
                   </p>
                 </div>
 
-                <div className="reaction mt-5">
-                  <div className="item rounded-icon small mx-2">
-                    <img
-                      data-type="like"
-                      src="/images/icon/icon-like.svg"
-                      className="icon-like"
-                      alt="item icon"
-                    />
-                  </div>
-                  <div className="item rounded-icon small mx-2">
-                    <img
-                      data-type="dislike"
-                      src="/images/icon/icon-dislike.svg"
-                      className="icon-dislike"
-                      alt="item icon"
-                    />
-                  </div>
-                </div>
+                <Reaction
+                  reaction={reaction}
+                  onReact={(value) => setReaction(value)}
+                  classNames="mt-5"
+                  likeIconClassNames="mx-2"
+                  dislikeIconClassNames="mx-2"
+                />
 
                 <div className="add-comment button-hover" onClick={onShow}>
                   <img

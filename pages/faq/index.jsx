@@ -1,6 +1,7 @@
-import PageWrapper from 'widgets/PageWrapper';
-import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import PageWrapper from 'widgets/PageWrapper';
+import { Reaction } from 'widgets/Reaction';
 
 const data = [
   {
@@ -39,6 +40,7 @@ const data = [
 const Page = () => {
   const [faqModalVisible, setFaqModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [reaction, setReaction] = useState(null);
 
   const viewFaq = (item) => {
     setSelectedItem(item);
@@ -106,24 +108,13 @@ const Page = () => {
               the landlord
             </span>
 
-            <div className="reaction no-shadow mt-5">
-              <div className="item rounded-icon small mx-1">
-                <img
-                  data-type="like"
-                  src="/images/icon/icon-like.svg"
-                  className="icon-like"
-                  alt="item icon"
-                />
-              </div>
-              <div className="item rounded-icon small mx-1">
-                <img
-                  data-type="dislike"
-                  src="/images/icon/icon-dislike.svg"
-                  className="icon-dislike"
-                  alt="item icon"
-                />
-              </div>
-            </div>
+            <Reaction
+              reaction={reaction}
+              onReact={(value) => setReaction(value)}
+              classNames="no-shadow mt-5"
+              likeIconClassNames="mx-1"
+              dislikeIconClassNames="mx-1"
+            />
           </div>
         </Modal.Body>
       </Modal>
