@@ -62,8 +62,7 @@ const Page = () => (
         </div>
 
         <button type="button" className="button btn-view-all-vacancies">
-          VIEW
-          <span className="font-weight-bold">ALL VACANCIES</span>
+          VIEW <span className="font-weight-bold">ALL VACANCIES</span>
         </button>
       </div>
     </div>

@@ -21,11 +21,13 @@ const Page = () => (
           rel="noreferrer"
           className="text-primary"
         >
-          www.belastingdienst.nl
+          {' '}
+          www.belastingdienst.nl{' '}
         </a>
         and
         <a href="https://www.ind.nl" target="_blank" rel="noreferrer" className="text-primary">
-          www.ind.nl
+          {' '}
+          www.ind.nl{' '}
         </a>
         for more information.
       </p>
@@ -79,8 +81,8 @@ const Page = () => (
           <div className="main-box">
             <p className="main-desc">
               Welcome to The Netherlands! Once you have found your new home with
-              <span className="text-primary">Digi Rent</span> you will arrange a check-in.
-              <span className="text-primary">Digi Rent</span> has a diplomatic clause standard in
+              <span className="text-primary"> Digi Rent </span> you will arrange a check-in.
+              <span className="text-primary"> Digi Rent</span> has a diplomatic clause standard in
               the contract and will make sure all documents like rental contracts and check-in
               reports are stored in the <span className="text-primary">Digi Rent</span> secure
               vault.
@@ -95,7 +97,7 @@ const Page = () => (
           <div className="main-box">
             <p className="main-desc">
               Time to get to know your way around town! The
-              <span className="text-primary">Digi Rent</span> community is a great place to start.
+              <span className="text-primary"> Digi Rent</span> community is a great place to start.
               Make sure to find a doctor and dentist and subscribe to your utilities and media
               connections. Tip: check the use of your utilities on a 6-month basis as the fee is
               only an estimated amount.

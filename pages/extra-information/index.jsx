@@ -53,7 +53,7 @@ const Page = () => {
               When using this website, <span className="text-primary">Digi Rent</span> uses cookies
               and other tracking technologies &quot;Cookies&quot;. In addition to Cookies which are
               necessary for the proper functioning of its website, subject to your preferences,
-              <span className="text-primary">Digi Rent</span> may also use Cookies to analyze and
+              <span className="text-primary"> Digi Rent</span> may also use Cookies to analyze and
               optimize the website functionality and o deliver conent tailored to your interests.
             </p>
           </div>
@@ -84,7 +84,7 @@ const Page = () => {
               <div className="main-box">
                 <p className="main-desc">
                   <span className="text-primary">&quot;FUNCTIONAL&quot; COOKIES</span> and enables
-                  <span className="text-primary">Digi Rent</span> and its authorized partners to
+                  <span className="text-primary"> Digi Rent </span> and its authorized partners to
                   collect statistics and to collectt and use Cookie data to provide you a
                   personalized web experience and more relevant ads on third party websites.
                 </p>
@@ -102,9 +102,9 @@ const Page = () => {
                 <p className="main-desc">
                   <span className="text-primary d-block">PROCEED WITH REQUIRED COOKIES</span> Only
                   will set your Cookies preferences to &quot;Required&quot; and will preventt
-                  <span className="text-primary">Digi Rent</span> and its parttners from collecting
-                  and using Cookie data to collect statistics and to provide you a personalized web
-                  experience and more relevant ads on third party websites.
+                  <span className="text-primary"> Digi Rent </span> and its parttners from
+                  collecting and using Cookie data to collect statistics and to provide you a
+                  personalized web experience and more relevant ads on third party websites.
                 </p>
               </div>
             </div>
@@ -146,8 +146,8 @@ const Page = () => {
             <p className="main-desc">
               With advanced data encryption, verification, and key management to assure you that
               your Data is protected across applications. transactions, storage, and our platform.
-              <span className="text-primary">Digi Rent</span> simplifies the protection of sensitive
-              data in even the most complex use cases.
+              <span className="text-primary"> Digi Rent</span> simplifies the protection of
+              sensitive data in even the most complex use cases.
             </p>
           </div>
 

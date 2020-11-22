@@ -13,7 +13,7 @@ const index = () => (
         <h1 className="text">DIGI RENT</h1>
       </div>
       <p className="subscriber-title">
-        <span className="text-primary font-weight-bold">subscribe</span>
+        <span className="text-primary font-weight-bold">subscribe </span>
         <br className="d-block d-sm-none" />
         to receive our news
       </p>
@@ -65,15 +65,6 @@ const index = () => (
             src="/images/social-media/youtube.svg"
             className="icon"
             alt="youtube"
-            width={40}
-            height={40}
-          />
-        </a>
-        <a href="#">
-          <img
-            src="/images/icon/icon-link.svg"
-            className="icon-link"
-            alt="link"
             width={40}
             height={40}
           />

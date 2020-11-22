@@ -9,7 +9,7 @@ const Page = () => (
       <p className="main-desc text-center mt-5">
         In terms of pricing we offer 2 packages for the Landlords. You can always publish your house
         and have 24/7 customer service. As service is the most important thing which
-        <span className="text-primary">Digi Rent</span> strives for. Below you will find the
+        <span className="text-primary"> Digi Rent</span> strives for. Below you will find the
         packages which will suit you best.
       </p>
 

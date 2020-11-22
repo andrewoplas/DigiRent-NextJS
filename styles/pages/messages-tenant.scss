@@ -3,7 +3,6 @@
 @import './abstract/breakpoint';
 
 .layout-content.messages-tenant {
-  padding-top: 7px;
   padding-bottom: 400px;
 
   @include media-breakpoint-down(lg) {

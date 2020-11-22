@@ -1,8 +1,10 @@
-@import "../abstract/mixins";
-@import "../abstract/variables";
-@import "../abstract/breakpoint";
+@import '../abstract/mixins';
+@import '../abstract/variables';
+@import '../abstract/breakpoint';
 
 .layout-content {
+  padding-top: 160px;
+
   .main-title {
     @include font(35px, $fw-light);
     @include clear-spacing;

@@ -9,6 +9,7 @@
     "start": "next start -p 8000"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.5.3",
     "classnames": "^2.2.6",
     "next": "10.0.2",

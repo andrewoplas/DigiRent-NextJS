@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 const index = () => (
   <>
-    <section className="layout-header">
-      <img src="/images/header-bg.svg" alt="header background" className="header-background" />
+    <img src="/images/header-bg.svg" alt="header background" className="header-background" />
 
+    <section className="layout-header">
       <div className="header-logo-user">
         <div className="logo">
           <h1 className="text">DIGI RENT</h1>
@@ -39,12 +39,13 @@ const index = () => (
           </div>
         </div>
       </div>
-    </section>
-    <div className="header-back">
-      <div className="back">
-        <img src="/images/icon/icon-arrow-left-white.svg" alt="icon user" />
+
+      <div className="header-back">
+        <div className="back">
+          <img src="/images/icon/icon-arrow-left-white.svg" alt="icon user" />
+        </div>
       </div>
-    </div>
+    </section>
   </>
 );
 
