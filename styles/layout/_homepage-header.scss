@@ -1,0 +1,125 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+@import '../abstract/breakpoint';
+
+.layout-homepage-header {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  padding: 0 25px;
+  @include flex(stretch, flex-start);
+
+  .header-logo {
+    @include flex($justify-content: space-between);
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 15px;
+    }
+
+    .logo {
+      padding: 13px 22px;
+      margin-top: 22px;
+      border-radius: 10px;
+      background-color: $color-primary;
+
+      .text {
+        color: white;
+        @include clear-spacing;
+        @include font(40px, $fw-bold);
+
+        @include media-breakpoint-down(xl) {
+          padding: 10px 18px;
+          margin-top: 0px;
+
+          .text {
+            @include font(25px, $fw-bold);
+          }
+        }
+      }
+    }
+  }
+
+  .header-menu {
+    @include flex(space-around, center);
+    flex: 1;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 15px;
+    }
+
+    .note {
+      background-color: white;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      padding: 10px 27px;
+      padding-top: 15px;
+      @include simple-shadow;
+
+      span {
+        text-transform: uppercase;
+        color: $color-dark;
+        @include font($size: 15px);
+      }
+    }
+
+    .main-menu {
+      @include flex();
+
+      a {
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        @include font($size: 15px);
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        @include flex(center, center);
+
+        a {
+          @include font($size: 12px);
+        }
+      }
+    }
+
+    .portal-choices {
+      @include flex(stretch, center);
+
+      .sign-up {
+        padding: 7px 10px;
+        border-radius: 15px;
+        background-color: $color-primary;
+      }
+    }
+
+    .links {
+      @include font(15px, bold);
+      color: white;
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down(xl) {
+      .note {
+        @include rem(margin-right, 50px);
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      .note {
+        display: none;
+      }
+
+      .header-menu-wrapper {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .toggle-switch-language {
+    margin-top: 7px;
+
+    .switch {
+      background-color: white;
+    }
+  }
+}

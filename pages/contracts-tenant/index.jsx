@@ -1,6 +1,7 @@
 import { Select } from 'components/Select';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { PropertyInfo } from 'widgets/PropertyInfo';
 import PageWrapper from 'widgets/PageWrapper';
 
 const typeOptions = [
@@ -25,62 +26,17 @@ const Page = () => {
         <div className="container">
           <h3 className="main-title">CONTRACTS</h3>
 
-          <div className="row houses">
+          <div className="row properties">
             {[1, 2, 3].map((key) => (
               <div key={key} className="col-12 col-md-6 col-lg-4">
-                <div className="item main-box p-0">
-                  <div className="p-4">
-                    <h3 className="main-subtitle font-weight-bold text-left">Pahvale Villa</h3>
-                    <div className="d-flex align-items-center mt-2">
-                      <img
-                        src="/images/icon/icon-map-marker-primary.svg"
-                        height="20"
-                        width="20"
-                        alt="icon"
-                      />
-                      <p className="ml-2 main-desc">Indore, Madhya Pradesh, India</p>
-                    </div>
-                  </div>
-
-                  <div className="house-bg">
-                    <div className="monthly-payment">
-                      <div className="icon-wrapper">
-                        <img src="/images/icon/icon-euro-white.svg" alt="icon" />
-                      </div>
-                      <span className="main-desc text-white text-center font-weight-bold value">
-                        246
-                      </span>
-                      <span className="main-desc text-white text-center dash">–</span>
-                      <span className="main-desc text-white text-center mo">mo</span>
-                    </div>
-                    <div className="rooms-toilet">
-                      <div className="d-flex align-items-center justify-content-between">
-                        <img
-                          src="/images/icon/icon-bed-primary.svg"
-                          height="16"
-                          width="16"
-                          alt="icon"
-                        />
-                        <p className="ml-1 main-desc">4</p>
-                      </div>
-                      <div className="d-flex align-items-center justify-content-between mt-3">
-                        <img
-                          src="/images/icon/icon-bath-tub-primary.svg"
-                          height="16"
-                          width="16"
-                          alt="icon"
-                        />
-                        <p className="ml-1 main-desc">2</p>
-                      </div>
-                    </div>
-                    <div className="not-selected main-desc">
-                      <span className="font-weight-bold d-block">NOT</span> SELECTED
-                    </div>
-                    <button type="button" className="button" onClick={onShow}>
-                      <span className="font-weight-bold"> SIGNED </span> DOCUMENTS
-                    </button>
-                  </div>
-                </div>
+                <PropertyInfo
+                  name="Pahvale Villa"
+                  location="Indore, Madhya Pradesh, India"
+                  rentFee="246"
+                  bedCount="4"
+                  crCount="2"
+                  onShow={onShow}
+                />
               </div>
             ))}
           </div>

@@ -13,43 +13,8 @@
     padding-bottom: 150px;
   }
 
-  .selector-buttons {
+  .user-select {
     margin-top: 80px;
-    @include flex(center, center);
-
-    .item {
-      margin: 0 20px;
-      cursor: pointer;
-
-      a {
-        text-decoration: none;
-      }
-
-      &.active {
-        .text {
-          color: $color-primary;
-        }
-
-        img {
-          display: none;
-
-          &.icon-active {
-            display: block;
-          }
-        }
-      }
-
-      img {
-        &.icon-active {
-          display: none;
-        }
-      }
-
-      .text {
-        @include font(17px, $fw-light);
-        color: $color-dark-gray;
-      }
-    }
   }
 
   .social-medias-wrapper {
@@ -77,22 +42,6 @@
       @include media-breakpoint-down(sm) {
         margin-left: 0;
         margin-right: 0;
-      }
-    }
-
-    .slick-arrow {
-      flex-shrink: 0;
-      height: 35px;
-      width: 35px;
-      border-radius: 50%;
-      padding: 0;
-
-      @include media-breakpoint-down(xs) {
-        display: none !important;
-      }
-
-      img {
-        width: 40%;
       }
     }
 

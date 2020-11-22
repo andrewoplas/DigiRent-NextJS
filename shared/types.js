@@ -5,11 +5,6 @@ export const userTypes = {
   LANDLORD: 'landlords',
 };
 
-export const rentalTipsType = {
-  TENANT: 'tenant',
-  LANDLORD: 'landlords',
-};
-
 export const moveInScenarioTypes = {
   SEND: 'SEND',
   ATTACH: 'ATTACH',

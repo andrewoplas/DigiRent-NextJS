@@ -1,14 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
-
-import cn from 'classnames';
-import Link from 'next/link';
+import { NextArrow, PrevArrow } from 'components/SlickArrows';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import { rentalTipsType } from 'shared/types';
+import { userTypes } from 'shared/types';
 import PageWrapper from 'widgets/PageWrapper';
 import { Reaction } from 'widgets/Reaction';
 import { SocialMedias } from 'widgets/SocialMedias';
+import { UserSelect } from 'widgets/UserSelect';
 
 const data = [
   {
@@ -22,36 +21,28 @@ const data = [
   },
 ];
 
-const NextArrow = ({ onClick }) => (
-  <button type="button" className={cn('button btn-next slick-arrow')} onClick={onClick}>
-    <img src="/images/icon/icon-caret-right-white.svg" alt="next arrow" />
-  </button>
-);
-
-const PrevArrow = ({ onClick }) => (
-  <button type="button" className={cn('button btn-prev slick-arrow')} onClick={onClick}>
-    <img src="/images/icon/icon-caret-left-white.svg" alt="next arrow" />
-  </button>
-);
+const slickSettings = {
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const Page = () => {
   const router = useRouter();
 
-  const [hash, setHash] = useState(rentalTipsType.TENANT);
+  const [hash, setHash] = useState(userTypes.TENANT);
   const [reaction, setReaction] = useState(null);
-
-  const slickSettings = {
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   // Effect: Get hash value
   useEffect(() => {
-    const hashValue = router.asPath.split('#')?.[1] || rentalTipsType.TENANT;
+    const hashValue = router.asPath.split('#')?.[1] || userTypes.TENANT;
     setHash(hashValue);
   }, [router]);
+
+  const onSelect = (userType) => {
+    router.replace(`#${userType}`);
+  };
 
   const onReact = (value, id) => {
     setReaction((reactions) => ({
@@ -67,47 +58,7 @@ const Page = () => {
       <div className="container-fluid container-md">
         <h3 className="main-title">RENTAL TIPS</h3>
 
-        <div className="selector-buttons">
-          <div className={cn('item for-tenants', { active: hash === rentalTipsType.TENANT })}>
-            <Link href={`#${rentalTipsType.TENANT}`}>
-              <a>
-                <div className="rounded-icon mx-auto">
-                  <img
-                    className="icon-inactive"
-                    src="/images/icon/icon-key-gray.svg"
-                    alt="item icon"
-                  />
-                  <img
-                    className="icon-active"
-                    src="/images/icon/icon-key-primary.svg"
-                    alt="item icon"
-                  />
-                </div>
-                <span className="text mt-3 d-block text-center">FOR TENANTS</span>
-              </a>
-            </Link>
-          </div>
-
-          <div className={cn('item for-landlords', { active: hash === rentalTipsType.LANDLORD })}>
-            <Link href={`#${rentalTipsType.LANDLORD}`}>
-              <a>
-                <div className="rounded-icon mx-auto">
-                  <img
-                    className="icon-inactive"
-                    src="/images/icon/icon-roof-gray.svg"
-                    alt="item icon"
-                  />
-                  <img
-                    className="icon-active"
-                    src="/images/icon/icon-roof-primary.svg"
-                    alt="item icon"
-                  />
-                </div>
-                <span className="text mt-3 d-block text-center">FOR LANDLORDS</span>
-              </a>
-            </Link>
-          </div>
-        </div>
+        <UserSelect selected={hash} onSelect={onSelect} />
 
         <Slider {...slickSettings} className="list-carousel">
           {data.map((item) => (

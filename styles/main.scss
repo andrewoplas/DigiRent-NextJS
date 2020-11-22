@@ -5,6 +5,7 @@
 
 // layout
 @import 'layout/header';
+@import 'layout/homepage-header';
 @import 'layout/content';
 @import 'layout/footer';
 @import 'layout/base';
@@ -17,10 +18,15 @@
 @import 'components/progress';
 @import 'components/field-group-select';
 @import 'components/toggle-switch';
+@import 'components/toggle-switch-language';
 @import 'components/pagination';
 @import 'components/search-bar';
 @import 'components/reaction';
 @import 'components/social-media-wrapper';
+
+// widgets
+@import 'widgets/property-info';
+@import 'widgets/user-select';
 
 // pages
 
@@ -45,3 +51,4 @@
 @import 'pages/payments-landlord';
 @import 'pages/payments-tenant';
 @import 'pages/blog';
+@import 'pages/homepage';

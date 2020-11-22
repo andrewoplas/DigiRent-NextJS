@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { Select } from 'components/Select';
+import { ToggleSwitch } from 'components/ToggleSwitch';
 import PageWrapper from 'widgets/PageWrapper';
 
 const languageOptions = [
@@ -31,12 +32,21 @@ const houseOptions = [
   { name: 'House 4', value: 4 },
 ];
 
+const toggleSwitchOptions = {
+  ON: 'on',
+  OFF: 'off',
+};
+
 const Page = () => {
   const [language, setLanguage] = useState(null);
   const [city, setCity] = useState(null);
   const [city2, setCity2] = useState(null);
   const [gender, setGender] = useState(null);
   const [house, setHouse] = useState(null);
+
+  const [toggle1, setToggle1] = useState(toggleSwitchOptions.ON);
+  const [toggle2, setToggle2] = useState(toggleSwitchOptions.ON);
+  const [toggle3, setToggle3] = useState(toggleSwitchOptions.OFF);
 
   return (
     <PageWrapper title="DigiRent - Account" pageName="account-tenant">
@@ -137,90 +147,36 @@ const Page = () => {
             </div>
 
             <div className="toggle-buttons main-box">
-              <div className="toggle-switch">
-                <div className="switch">
-                  <input
-                    id="toggle-on-1"
-                    className="toggle toggle-left"
-                    name="toggle-1"
-                    value="false"
-                    type="radio"
-                    checked
-                  />
-                  <label htmlFor="toggle-on-1" className="switch-button">
-                    ON
-                  </label>
-                  <input
-                    id="toggle-off-1"
-                    className="toggle toggle-right"
-                    name="toggle-1"
-                    value="true"
-                    type="radio"
-                  />
-                  <label htmlFor="toggle-off-1" className="switch-button">
-                    OFF
-                  </label>
-                </div>
-                <span className="main-desc ml-3">Email messages notifications</span>
-              </div>
+              <ToggleSwitch
+                name="toggle-1"
+                label="Email messages notifications"
+                onValue={toggleSwitchOptions.ON}
+                offValue={toggleSwitchOptions.OFF}
+                value={toggle1}
+                onChange={setToggle1}
+              />
 
               <hr />
 
-              <div className="toggle-switch">
-                <div className="switch">
-                  <input
-                    id="toggle-on-2"
-                    className="toggle toggle-left"
-                    name="toggle-2"
-                    value="false"
-                    type="radio"
-                    checked
-                  />
-                  <label htmlFor="toggle-on-2" className="switch-button">
-                    ON
-                  </label>
-                  <input
-                    id="toggle-off-2"
-                    className="toggle toggle-right"
-                    name="toggle-2"
-                    value="true"
-                    type="radio"
-                  />
-                  <label htmlFor="toggle-off-2" className="switch-button">
-                    OFF
-                  </label>
-                </div>
-                <span className="main-desc ml-3">Monthly newsletter </span>
-              </div>
+              <ToggleSwitch
+                name="toggle-2"
+                label="Monthly newsletter"
+                onValue={toggleSwitchOptions.ON}
+                offValue={toggleSwitchOptions.OFF}
+                value={toggle2}
+                onChange={setToggle2}
+              />
 
               <hr />
 
-              <div className="toggle-switch">
-                <div className="switch">
-                  <input
-                    id="toggle-on-3"
-                    className="toggle toggle-left"
-                    name="toggle-3"
-                    value="false"
-                    type="radio"
-                  />
-                  <label htmlFor="toggle-on-3" className="switch-button">
-                    ON
-                  </label>
-                  <input
-                    id="toggle-off-3"
-                    className="toggle toggle-right"
-                    name="toggle-3"
-                    value="true"
-                    type="radio"
-                    checked
-                  />
-                  <label htmlFor="toggle-off-3" className="switch-button">
-                    OFF
-                  </label>
-                </div>
-                <span className="main-desc ml-3">Weekly update new tenants</span>
-              </div>
+              <ToggleSwitch
+                name="toggle-3"
+                label="Weekly update new tenants"
+                onValue={toggleSwitchOptions.ON}
+                offValue={toggleSwitchOptions.OFF}
+                value={toggle3}
+                onChange={setToggle3}
+              />
             </div>
           </div>
 
