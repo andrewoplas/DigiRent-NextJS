@@ -14,8 +14,8 @@ const data = [
 
 const Page = () => (
   <PageWrapper title="DigiRent - Messages" pageName="messages">
-    <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
-    <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
+    <img src="/images/main-left-bg.svg" className="left-main-background" alt="left bg" />
+    <img src="/images/main-right-bg.svg" className="right-main-background" alt="right bg" />
     <div className="container-fluid container-lg">
       <h3 className="main-title">MESSAGES</h3>
       <div className="row mt-5">

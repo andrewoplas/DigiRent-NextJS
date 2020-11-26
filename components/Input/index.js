@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import cn from 'classnames';
 
-export const Input = ({ value, onChange, placeholder, icon, classNames, inputClassNames }) => (
-  <div className={cn('field-group', classNames)}>
+const Input = ({ value, onChange, placeholder, icon, classNames, inputClassNames }) => (
+  <div className={cn('Input field-group', classNames)}>
     <div className="field-icon">
       <img src={`/images/icon/${icon}.svg`} alt="icon" />
     </div>
@@ -19,6 +19,6 @@ export const Input = ({ value, onChange, placeholder, icon, classNames, inputCla
 
 Input.defaultProps = {
   placeholder: '',
-  onValue: 'true',
-  offValue: 'false',
 };
+
+export default Input;

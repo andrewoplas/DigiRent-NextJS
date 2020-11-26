@@ -1,6 +1,6 @@
-@import "../abstract/mixins";
-@import "../abstract/variables";
-@import "../abstract/breakpoint";
+@import '../abstract/mixins';
+@import '../abstract/variables';
+@import '../abstract/breakpoint';
 
 * {
   font-family: $font-primary;
@@ -38,14 +38,14 @@ body {
   overflow: hidden;
 }
 
-.left-arrow-bg {
+.left-main-background {
   position: absolute;
   left: 0;
   top: 720px;
   z-index: -1;
 }
 
-.right-arrow-bg {
+.right-main-background {
   position: absolute;
   right: 0;
   top: 100px;

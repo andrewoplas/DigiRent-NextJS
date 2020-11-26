@@ -41,8 +41,8 @@ const Page = () => {
 
   return (
     <PageWrapper title="DigiRent - Account" pageName="account-landlord">
-      <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
-      <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
+      <img src="/images/main-left-bg.svg" className="left-main-background" alt="left bg" />
+      <img src="/images/main-right-bg.svg" className="right-main-background" alt="right bg" />
       <div className="container">
         <h3 className="main-title">EDIT PROFILE</h3>
         <p className="main-subtitle text-primary">LANDLORD</p>

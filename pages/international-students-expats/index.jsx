@@ -5,8 +5,8 @@ const Page = () => (
     title="DigiRent - International Students Expats"
     pageName="international-students-expats"
   >
-    <img src="/images/main-left-airplane-bg.png" className="left-arrow-bg" alt="left bg" />
-    <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
+    <img src="/images/main-left-airplane-bg.png" className="left-main-background" alt="left bg" />
+    <img src="/images/main-right-bg.svg" className="right-main-background" alt="right bg" />
     <div className="container">
       <h3 className="main-title">INTERNATIONAL STUDENTS & EXPATS</h3>
 

@@ -12,8 +12,8 @@ const Page = () => {
   return (
     <>
       <PageWrapper title="DigiRent - Contact" pageName="contact">
-        <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
-        <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
+        <img src="/images/main-left-bg.svg" className="left-main-background" alt="left bg" />
+        <img src="/images/main-right-bg.svg" className="right-main-background" alt="right bg" />
         <div className="container">
           <h3 className="main-title">CONTACT US</h3>
           <p className="main-subtitle mt-5 dark-gray">

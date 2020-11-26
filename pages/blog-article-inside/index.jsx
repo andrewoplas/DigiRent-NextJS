@@ -46,8 +46,8 @@ const Page = () => {
   return (
     <>
       <PageWrapper title="DigiRent - Blog" pageName="blog-article-inside">
-        <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
-        <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
+        <img src="/images/main-left-bg.svg" className="left-main-background" alt="left bg" />
+        <img src="/images/main-right-bg.svg" className="right-main-background" alt="right bg" />
         <div className="container-fluid container-lg mt-5">
           <div className="row">
             <div className="col-12 col-lg-8">

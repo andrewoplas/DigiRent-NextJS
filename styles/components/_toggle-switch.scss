@@ -1,5 +1,5 @@
-@import "../abstract/mixins";
-@import "../abstract/variables";
+@import '../abstract/mixins';
+@import '../abstract/variables';
 
 .toggle-switch {
   @include flex($align-items: center);
@@ -19,9 +19,10 @@
       border-radius: 20px;
       transition: background 600ms ease, color 600ms ease;
       margin-bottom: 0;
+      z-index: 9999;
     }
 
-    input[type="radio"].toggle {
+    input[type='radio'].toggle {
       display: none;
       & + label {
         cursor: pointer;
@@ -32,7 +33,7 @@
         color: $color-dark-gray;
 
         &:after {
-          content: "";
+          content: '';
           height: 100%;
           position: absolute;
           top: 0;
@@ -54,7 +55,7 @@
 
         &:checked + label {
           &:after {
-            content: "ON";
+            content: 'ON';
             background: $color-primary;
           }
         }
@@ -70,7 +71,7 @@
 
         &:checked + label {
           &:after {
-            content: "OFF";
+            content: 'OFF';
             background: $color-dark-gray !important;
           }
         }

@@ -2,8 +2,8 @@ import PageWrapper from 'widgets/PageWrapper';
 
 const Page = () => (
   <PageWrapper title="DigiRent - About Us" pageName="about">
-    <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
-    <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
+    <img src="/images/main-left-bg.svg" className="left-main-background" alt="left bg" />
+    <img src="/images/main-right-bg.svg" className="right-main-background" alt="right bg" />
     <div className="container">
       <div className="about-us-wrapper">
         <h3 className="main-title">ABOUT US</h3>

@@ -23,10 +23,12 @@
 @import 'components/search-bar';
 @import 'components/reaction';
 @import 'components/social-media-wrapper';
+@import 'components/slick-arrows';
 
 // widgets
 @import 'widgets/property-info';
 @import 'widgets/user-select';
+@import 'widgets/blog-card';
 
 // pages
 
@@ -51,4 +53,4 @@
 @import 'pages/payments-landlord';
 @import 'pages/payments-tenant';
 @import 'pages/blog';
-@import 'pages/homepage';
+@import 'pages//homepage/homepage';

@@ -1,6 +1,41 @@
 import { useState } from 'react';
+import { BlogCard } from 'widgets/BlogCard';
 import PageWrapper from 'widgets/PageWrapper';
-import Link from 'next/link';
+
+const blogs = [
+  {
+    day: '18',
+    month: 'AUG',
+    title: 'FUN FACTS ABOUT NETHERLANDS',
+    description:
+      'And many other curiosities about this fascinating country. Netherlands is such an amazing place to discover',
+    link: 'blog-article-inside',
+  },
+  {
+    day: '18',
+    month: 'AUG',
+    title: 'FUN FACTS ABOUT NETHERLANDS',
+    description:
+      'And many other curiosities about this fascinating country. Netherlands is such an amazing place to discover',
+    link: 'blog-article-inside',
+  },
+  {
+    day: '18',
+    month: 'AUG',
+    title: 'FUN FACTS ABOUT NETHERLANDS',
+    description:
+      'And many other curiosities about this fascinating country. Netherlands is such an amazing place to discover',
+    link: 'blog-article-inside',
+  },
+  {
+    day: '18',
+    month: 'AUG',
+    title: 'FUN FACTS ABOUT NETHERLANDS',
+    description:
+      'And many other curiosities about this fascinating country. Netherlands is such an amazing place to discover',
+    link: 'blog-article-inside',
+  },
+];
 
 const archives = [
   { date: 'March 2018', number: 20 },
@@ -40,81 +75,40 @@ const Page = () => {
 
   return (
     <PageWrapper title="DigiRent - Blog" pageName="blog">
-      <img src="/images/main-left-bg.svg" className="left-arrow-bg" alt="left bg" />
-      <img src="/images/main-right-bg.svg" className="right-arrow-bg" alt="left bg" />
+      <img src="/images/main-left-bg.svg" className="left-main-background" alt="left bg" />
+      <img src="/images/main-right-bg.svg" className="right-main-background" alt="right bg" />
       <div className="container-fluid container-lg mt-5">
         <div className="row">
           <div className="col-12 col-lg-8">
             <h3 className="main-title">BLOG</h3>
 
             <div className="blogs row">
-              {[1, 2, 3, 4].map(() => (
+              {blogs.map((blog) => (
                 <div className="col-12 col-md-6">
-                  <div className="main-box item">
-                    <div className="blog-image">
-                      <img
-                        className="bottom-design"
-                        src="/images/blog-round-line.svg"
-                        alt="outline"
-                      />
-                      <div className="overlay" />
-                      <div className="date">
-                        <span className="font-weight-bold text-primary">18</span> AUG
-                      </div>
-                    </div>
-
-                    <h5 className="title font-weight-bold text-center">
-                      FUN FACTS ABOUT NETHERLANDS
-                    </h5>
-                    <p className="main-desc text-center mt-2">
-                      And many other curiosities about this fascinating country. Netherlands is such
-                      an amazing place to discover
-                    </p>
-
-                    <Link href="blog-article-inside">
-                      <button type="button" className="button min-width mr-3 d-block mx-auto mt-4">
-                        Read More
-                      </button>
-                    </Link>
-                  </div>
+                  <BlogCard
+                    classNames="item"
+                    day={blog.day}
+                    month={blog.month}
+                    title={blog.title}
+                    description={blog.description}
+                    link={blog.link}
+                  />
                 </div>
               ))}
             </div>
 
             {moreBlogsVisible && (
               <div className="blogs mt-0 row">
-                {[5, 6, 7, 8].map(() => (
+                {blogs.map((blog) => (
                   <div className="col-12 col-md-6">
-                    <div className="main-box item">
-                      <div className="blog-image">
-                        <img
-                          className="bottom-design"
-                          src="/images/blog-round-line.svg"
-                          alt="outline"
-                        />
-                        <div className="overlay" />
-                        <div className="date">
-                          <span className="font-weight-bold text-primary">18</span> AUG
-                        </div>
-                      </div>
-
-                      <h5 className="title font-weight-bold text-center">
-                        FUN FACTS ABOUT NETHERLANDS
-                      </h5>
-                      <p className="main-desc text-center mt-2">
-                        And many other curiosities about this fascinating country. Netherlands is
-                        such an amazing place to discover
-                      </p>
-
-                      <Link href="blog-article-inside">
-                        <button
-                          type="button"
-                          className="button min-width mr-3 d-block mx-auto mt-4"
-                        >
-                          Read More
-                        </button>
-                      </Link>
-                    </div>
+                    <BlogCard
+                      classNames="item"
+                      day={blog.day}
+                      month={blog.month}
+                      title={blog.title}
+                      description={blog.description}
+                      link={blog.link}
+                    />
                   </div>
                 ))}
               </div>
