@@ -8,4 +8,6 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import 'react-day-picker/lib/style.css';
 import '../styles/main.scss';
 
-export default ({ Component, pageProps }) => <Component {...pageProps} />;
+const App = ({ Component, pageProps }) => <Component {...pageProps} />;
+
+export default App;
