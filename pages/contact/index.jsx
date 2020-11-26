@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import PageWrapper from 'widgets/PageWrapper';
+import Link from 'next/link';
 
 const Page = () => {
   const [contactModalVisible, setContactModalVisible] = useState(false);
@@ -25,9 +26,11 @@ const Page = () => {
             contact us.
           </p>
           <div className="text-center">
-            <a href="faq.html" className="button btn-visit-faq min-width">
-              VISIT <span className="font-weight-bold">FAQ</span>
-            </a>
+            <Link href="faq">
+              <a className="button btn-visit-faq min-width">
+                VISIT <span className="font-weight-bold">FAQ</span>
+              </a>
+            </Link>
           </div>
 
           <div className="contacts row">

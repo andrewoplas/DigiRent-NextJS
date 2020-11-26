@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import PageWrapper from 'widgets/PageWrapper';
 import Link from 'next/link';
-import { rentalTipsType } from 'shared/types';
+import { userTypes } from 'shared/types';
 
 const Page = () => (
   <PageWrapper title="DigiRent - Sitemap" pageName="sitemap">
@@ -56,7 +56,7 @@ const Page = () => (
         <Link href="international-students-expats">
           <a>Blog for internationals</a>
         </Link>
-        <Link href={`rental-tips#${rentalTipsType.TENANT}`}>
+        <Link href={`rental-tips#${userTypes.TENANT}`}>
           <a>Rental Tips</a>
         </Link>
         <Link href="#">
@@ -65,7 +65,7 @@ const Page = () => (
         <Link href="pricing">
           <a>Pricing</a>
         </Link>
-        <Link href={`rental-tips#${rentalTipsType.TENANT}`}>
+        <Link href={`rental-tips#${userTypes.TENANT}`}>
           <a>Rental Tips</a>
         </Link>
         <Link href="faq">

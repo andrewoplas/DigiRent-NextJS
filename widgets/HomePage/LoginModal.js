@@ -111,14 +111,14 @@ const LoginModal = ({ onClose, isVisible }) => {
                 <a className="text-primary"> Terms of Use </a>
               </Link>
               and
-              <Link href="extra-information.html#cookies" target="_blank">
+              <Link href="extra-information#cookies" target="_blank">
                 <a className="text-primary"> Privacy Policy</a>
               </Link>
             </span>
           </div>
 
           <a
-            href="register.html"
+            href="#"
             className="sign-up-as mt-4 d-block text-center text-dark-gray font-weight-light"
           >
             Sign up as <span className="text-primary font-weight-bold"> TENANT </span> or

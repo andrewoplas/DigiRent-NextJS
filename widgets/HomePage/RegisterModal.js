@@ -161,7 +161,7 @@ const RegisterModal = ({ onClose, isVisible }) => {
                 <a className="text-primary"> Terms of Use </a>
               </Link>
               and
-              <Link href="extra-information.html#cookies" target="_blank">
+              <Link href="extra-information#cookies" target="_blank">
                 <a className="text-primary"> Privacy Policy</a>
               </Link>
             </span>
