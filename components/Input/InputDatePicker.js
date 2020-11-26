@@ -2,13 +2,17 @@
 import cn from 'classnames';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 
-const InputDatePicker = ({ onDayClick, icon, classNames, inputClassNames }) => (
+const InputDatePicker = ({ onDayClick, icon, placeholder, classNames, inputClassNames }) => (
   <div className={cn('Input field-group', classNames)}>
     <div className="field-icon">
       <img src={`/images/icon/${icon}.svg`} alt="icon" />
     </div>
     <span className="field-divider" />
-    <DayPickerInput classNames={inputClassNames} onDayChange={onDayClick} />
+    <DayPickerInput
+      placeholder={placeholder}
+      classNames={inputClassNames}
+      onDayChange={onDayClick}
+    />
   </div>
 );
 

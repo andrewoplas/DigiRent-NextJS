@@ -1,9 +1,13 @@
-@import "../abstract/mixins";
-@import "../abstract/variables";
+@import '../abstract/mixins';
+@import '../abstract/variables';
 
 .field-group {
   position: relative;
   @include flex($align-items: center);
+
+  .DayPickerInput {
+    width: 100%;
+  }
 
   input,
   textarea {

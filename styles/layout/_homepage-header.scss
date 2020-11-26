@@ -16,6 +16,10 @@
     padding-bottom: 15px;
     @include simple-shadow;
 
+    * {
+      transition: 300ms;
+    }
+
     @include media-breakpoint-up(xl) {
       .main-menu {
         margin-top: 20px;
@@ -42,10 +46,6 @@
       .toggle-switch-language {
         margin-top: 25px;
       }
-    }
-
-    * {
-      transition: 300ms;
     }
 
     .main-menu {
@@ -87,12 +87,12 @@
       }
     }
 
-    @include media-breakpoint-down(sm) {
-      padding: 0;
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
     }
 
-    @include media-breakpoint-down(xs) {
-      margin-top: 0;
+    @include media-breakpoint-down(sm) {
+      padding: 0;
     }
   }
 
@@ -127,6 +127,7 @@
       button {
         background-color: transparent;
         border: 0;
+        padding: 0;
       }
 
       .sign-up {
@@ -160,23 +161,11 @@
     }
 
     @include media-breakpoint-down(lg) {
+      margin-top: 15px;
+
       .note {
         display: none;
       }
-    }
-
-    @include media-breakpoint-down(md) {
-      position: absolute;
-      justify-content: space-between;
-      top: 15px;
-      left: 25px;
-      right: 25px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      padding: 0 15px;
-      left: 0;
-      right: 0;
     }
   }
 
@@ -192,10 +181,6 @@
 
     @include media-breakpoint-down(lg) {
       margin-top: 15px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      // margin-right: 0;
     }
   }
 
@@ -215,8 +200,16 @@
 
   @include media-breakpoint-down(md) {
     justify-content: space-between;
-    padding-top: 35px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+
+    .header-menu,
+    .toggle-switch-language {
+      display: none;
+    }
+
+    .btn-burger-menu {
+      display: block;
+    }
   }
 
   @include media-breakpoint-down(sm) {
@@ -227,15 +220,6 @@
   @include media-breakpoint-down(xs) {
     padding-top: 15px;
     padding-bottom: 15px !important;
-
-    .header-menu,
-    .toggle-switch-language {
-      display: none;
-    }
-
-    .btn-burger-menu {
-      display: block;
-    }
   }
 }
 
@@ -258,6 +242,7 @@
         background-color: transparent;
         border: 0;
         display: block;
+        padding: 0;
       }
     }
 
