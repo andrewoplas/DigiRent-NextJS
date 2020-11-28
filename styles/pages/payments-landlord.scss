@@ -404,79 +404,40 @@
       }
     }
   }
-}
 
-.confirmation-modal {
-  .modal-content {
-    overflow: hidden;
-  }
-
-  .modal-body {
-    padding: 0;
-    padding-bottom: 30px;
+  .payments-reminder {
     position: relative;
+    width: 225px;
+    background-color: white;
+    border-radius: $border-radius;
+    @include simple-shadow;
+    padding: 8px 14px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50px;
 
-    .modal-background {
-      transform: skew(0deg, -5deg);
-      height: 65px;
-      width: 100%;
-      position: absolute;
-      top: -22px;
-      left: 0;
-      background-color: $color-primary-lighter;
+    @include media-breakpoint-down(sm) {
+      display: none;
     }
+    .item {
+      padding-top: 5px;
+      padding-bottom: 5px;
 
-    .main-content {
-      padding: 70px 25px 30px 25px;
-      position: relative;
-      z-index: 2;
-
-      .title {
-        display: block;
-        @include font(18px, 400);
-        color: $color-dark-gray;
-        text-align: center;
-        line-height: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 350px;
+      .circular-icon {
+        height: 10px;
+        width: 10px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        flex-shrink: 0;
       }
-    }
-  }
-}
 
-.payments-reminder {
-  position: relative;
-  width: 225px;
-  background-color: white;
-  border-radius: $border-radius;
-  @include simple-shadow;
-  padding: 8px 14px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 50px;
-
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
-  .item {
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-    .circular-icon {
-      height: 10px;
-      width: 10px;
-      background-color: $color-primary;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .text {
-      @include font(12px, $fw-light);
-      color: $color-dark-gray;
+      .text {
+        @include font(12px, $fw-light);
+        color: $color-dark-gray;
+      }
     }
   }
 }

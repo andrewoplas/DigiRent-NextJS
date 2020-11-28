@@ -1,5 +1,5 @@
-@import "../abstract/breakpoint";
-@import "../abstract/variables";
+@import '../abstract/breakpoint';
+@import '../abstract/variables';
 
 .button {
   @include simple-shadow;
@@ -19,6 +19,10 @@
 
   &.yellow {
     background-color: $color-yellow;
+  }
+
+  &.green {
+    background-color: $color-green;
   }
 
   &.gray2 {

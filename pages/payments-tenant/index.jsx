@@ -202,25 +202,24 @@ const Page = () => {
       </PageWrapper>
 
       <Modal
-        className="confirmation-modal"
         show={keysModalVisible}
         onHide={onCloseKeysModal}
-        id="keys-modal"
+        className="confirmation-modal"
         centered
       >
         <Modal.Body>
           <div className="modal-background" />
 
           <div className="main-content">
-            <span className="title font-weight-light">
+            <p className="description">
               PLEASE CONFIRM IF YOU HAVE RECEIVED THE KEYS AND WANT TO RELEASE THE PAYMENT?
-            </span>
+            </p>
 
-            <div className="d-flex align-items-center justify-content-center mt-4">
-              <button type="button" className="button min-width mr-3" onClick={onCloseKeysModal}>
+            <div className="mt-4 buttons">
+              <button className="button btn-yes" onClick={onCloseKeysModal}>
                 YES
               </button>
-              <button type="button" className="button gray2 min-width" onClick={onCloseKeysModal}>
+              <button className="button gray2 btn-no" onClick={onCloseKeysModal}>
                 NO
               </button>
             </div>
@@ -229,33 +228,22 @@ const Page = () => {
       </Modal>
 
       <Modal
-        className="confirmation-modal"
         show={makePaymentModalVisible}
         onHide={onCloseMakePaymentModal}
-        id="make-payment-modal"
+        className="confirmation-modal"
         centered
       >
         <Modal.Body>
           <div className="modal-background" />
 
           <div className="main-content">
-            <span className="title font-weight-light">
-              ARE YOU SURE YOU WANT TO RELEASE THE PAY?
-            </span>
+            <p className="description">ARE YOU SURE YOU WANT TO RELEASE THE PAY?</p>
 
-            <div className="d-flex align-items-center justify-content-center mt-4">
-              <button
-                type="button"
-                className="button min-width mr-3"
-                onClick={onCloseMakePaymentModal}
-              >
+            <div className="mt-4 buttons">
+              <button className="button btn-yes" onClick={onCloseMakePaymentModal}>
                 YES
               </button>
-              <button
-                type="button"
-                className="button gray2 min-width"
-                onClick={onCloseMakePaymentModal}
-              >
+              <button className="button gray2 btn-no" onClick={onCloseMakePaymentModal}>
                 NO
               </button>
             </div>

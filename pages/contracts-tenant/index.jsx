@@ -35,7 +35,8 @@ const Page = () => {
                   rentFee="246"
                   bedCount="4"
                   crCount="2"
-                  onShow={onShow}
+                  buttonName="SIGNED DOCUMENTS"
+                  onClick={onShow}
                 />
               </div>
             ))}

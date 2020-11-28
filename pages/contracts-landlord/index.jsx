@@ -128,7 +128,8 @@ const Page = () => {
                   rentFee="246"
                   bedCount="4"
                   crCount="2"
-                  onShow={onShowDocumentModal}
+                  buttonName="SIGNED DOCUMENTS"
+                  onClick={onShowDocumentModal}
                 />
               </div>
             ))}
@@ -323,31 +324,26 @@ const Page = () => {
       <Modal
         show={confirmationModalVisible}
         onHide={onCloseConfirmationModal}
-        id="confirmation-modal"
+        className="confirmation-modal"
         centered
       >
         <Modal.Body>
           <div className="modal-background" />
 
           <div className="main-content">
-            <span className="title font-weight-light">ARE YOU SURE YOU WANT TO</span>
-            <span className="title text-primary font-weight-bold">
-              DELETE THE TENANT FROM THIS PROPERTY?
-            </span>
+            <p className="description">
+              ARE YOU SURE YOU WANT TO
+              <span className="text-primary font-weight-bold">
+                {' '}
+                DELETE THE TENANT FROM THIS PROPERTY?
+              </span>
+            </p>
 
-            <div className="d-flex align-items-center justify-content-center mt-4">
-              <button
-                type="button"
-                className="button min-width mr-3"
-                onClick={onCloseConfirmationModal}
-              >
+            <div className="mt-4 buttons">
+              <button className="button btn-yes" onClick={onCloseConfirmationModal}>
                 YES
               </button>
-              <button
-                type="button"
-                className="button gray2 min-width"
-                onClick={onCloseConfirmationModal}
-              >
+              <button className="button gray2 btn-no" onClick={onCloseConfirmationModal}>
                 NO
               </button>
             </div>

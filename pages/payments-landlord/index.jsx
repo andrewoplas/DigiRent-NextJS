@@ -187,25 +187,24 @@ const Page = () => {
       </PageWrapper>
 
       <Modal
-        className="confirmation-modal"
         show={keysModalVisible}
         onHide={onCloseKeysModal}
-        id="keys-modal"
+        className="confirmation-modal"
         centered
       >
         <Modal.Body>
           <div className="modal-background" />
 
           <div className="main-content">
-            <span className="title font-weight-light">
+            <p className="description">
               DID YOU HANDED THE KEYS AND DELIVER APARTMENTS AS PROMISED?
-            </span>
+            </p>
 
-            <div className="d-flex align-items-center justify-content-center mt-4">
-              <button type="button" className="button min-width mr-3" onClick={onCloseKeysModal}>
+            <div className="mt-4 buttons">
+              <button className="button btn-yes" onClick={onCloseKeysModal}>
                 YES
               </button>
-              <button type="button" className="button gray2 min-width" onClick={onCloseKeysModal}>
+              <button className="button gray2 btn-no" onClick={onCloseKeysModal}>
                 NO
               </button>
             </div>
@@ -214,33 +213,22 @@ const Page = () => {
       </Modal>
 
       <Modal
-        className="confirmation-modal"
         show={sendPayReminderModalVisible}
         onHide={onCloseSendPayReminderModal}
-        id="send-pay-reminder-modal"
+        className="confirmation-modal"
         centered
       >
         <Modal.Body>
           <div className="modal-background" />
 
           <div className="main-content">
-            <span className="title font-weight-light">
-              ARE YOU SURE YOU WANT TO SEND A PAY REMINDER?
-            </span>
+            <p className="description">ARE YOU SURE YOU WANT TO SEND A PAY REMINDER?</p>
 
-            <div className="d-flex align-items-center justify-content-center mt-4">
-              <button
-                type="button"
-                className="button min-width mr-3"
-                onClick={onCloseSendPayReminderModal}
-              >
+            <div className="mt-4 buttons">
+              <button className="button btn-yes" onClick={onCloseSendPayReminderModal}>
                 YES
               </button>
-              <button
-                type="button"
-                className="button gray2 min-width"
-                onClick={onCloseSendPayReminderModal}
-              >
+              <button className="button gray2 btn-no" onClick={onCloseSendPayReminderModal}>
                 NO
               </button>
             </div>

@@ -1,14 +1,28 @@
+export const propertyInfoSelectionType = {
+  NOT_SELECTED: 'NOT_SELECTED',
+  SELECTED: 'SELECTED',
+  STILL_TO_COMMENT: 'STILL_TO_COMMENT',
+};
+
 export const PropertyInfo = ({
   name,
   location,
   rentFee,
   bedCount,
   crCount,
-  showSelection,
+  selectionType,
   houseImage,
-  onShow,
+  buttonName,
+  onClick,
+  onDelete,
 }) => (
   <div className="property-info main-box p-0">
+    {!!onDelete && (
+      <button className="button-icon btn-delete gray2" onClick={onDelete}>
+        <img src="/images/icon/icon-cancel-dark-gray.svg" alt="icon" />
+      </button>
+    )}
+
     <div className="p-3 p-md-4">
       <h3 className="main-subtitle font-weight-bold text-left">{name}</h3>
       <div className="d-flex align-items-center mt-2">
@@ -37,14 +51,30 @@ export const PropertyInfo = ({
         </div>
       </div>
 
-      {showSelection && (
-        <div className="not-selected main-desc">
-          <span className="font-weight-bold d-block">NOT</span> SELECTED
-        </div>
+      {!!selectionType && (
+        <>
+          {selectionType === propertyInfoSelectionType.NOT_SELECTED && (
+            <div className="selection not-selected main-desc">
+              <span className="font-weight-bold d-block">NOT</span> SELECTED
+            </div>
+          )}
+
+          {selectionType === propertyInfoSelectionType.SELECTED && (
+            <div className="selection selected main-desc">
+              <span className="font-weight-bold d-block">NOT</span> SELECTED
+            </div>
+          )}
+
+          {selectionType === propertyInfoSelectionType.STILL_TO_COMMENT && (
+            <div className="selection still-to-comment main-desc">
+              <span className="font-weight-bold d-block">STILL TO</span> SELECTED
+            </div>
+          )}
+        </>
       )}
-      {onShow && (
-        <button type="button" className="button" onClick={onShow}>
-          <span className="font-weight-bold"> SIGNED </span> DOCUMENTS
+      {!!onClick && (
+        <button type="button" className="button" onClick={onClick}>
+          {buttonName}
         </button>
       )}
     </div>
@@ -52,6 +82,10 @@ export const PropertyInfo = ({
 );
 
 PropertyInfo.defaultProps = {
-  showSelection: true,
+  selectionType: null,
+  onClick: null,
+  onDelete: null,
+  onShow: null,
+  buttonName: '',
   houseImage: '/images/house-sample-1.jpg',
 };

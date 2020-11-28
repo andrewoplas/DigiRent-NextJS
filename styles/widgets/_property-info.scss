@@ -4,6 +4,7 @@
   margin-top: 25px;
   margin-left: 20px;
   margin-right: 20px;
+  position: relative;
 
   @include media-breakpoint-down(md) {
     margin-left: 10px;
@@ -79,8 +80,7 @@
       }
     }
 
-    .not-selected {
-      background-color: #aeaeae;
+    .selection {
       position: absolute;
       right: 0;
       top: 255px;
@@ -91,6 +91,18 @@
       font-size: 12px;
       line-height: 100%;
       padding: 3px 8px;
+
+      &.not-selected {
+        background-color: #aeaeae;
+      }
+
+      &.selected {
+        background-color: #70cc53;
+      }
+
+      &.still-to-comment {
+        background-color: #ff8989;
+      }
     }
 
     @include breakpoint-down(610px) {
@@ -108,5 +120,11 @@
       margin-right: auto;
       bottom: -18px;
     }
+  }
+
+  .btn-delete {
+    position: absolute;
+    top: -10px;
+    right: -10px;
   }
 }
