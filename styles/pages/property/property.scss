@@ -16,6 +16,13 @@
     padding-bottom: 150px;
   }
 
+  @include media-breakpoint-down(xs) {
+    .left-main-background,
+    .right-main-background {
+      display: none;
+    }
+  }
+
   .left-main-background {
     top: 140vh;
   }
@@ -39,7 +46,7 @@
   }
 
   .landing {
-    height: 90vh;
+    min-height: 90vh;
     background-image: url('/images/property-bg.jpg');
     background-size: cover;
     background-position: top;
