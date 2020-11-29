@@ -1,7 +1,8 @@
-@import "../abstract/mixins";
-@import "../abstract/variables";
+@import '../abstract/mixins';
+@import '../abstract/variables';
 
-.file-upload {
+.file-upload,
+.FileUpload {
   @include flex(space-between, center);
 
   .file-select {
@@ -22,7 +23,7 @@
     margin-left: 8px;
   }
 
-  input[type="file"] {
+  input[type='file'] {
     z-index: 100;
     cursor: pointer;
     position: absolute;

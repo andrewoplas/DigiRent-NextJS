@@ -103,22 +103,22 @@ const index = () => (
           <div className="col-6 col-md-4 col-lg header-column">
             <h3>Digi Rent</h3>
             <div className="list">
-              <Link href="about">
+              <Link href="/about">
                 <a>About Us</a>
               </Link>
-              <Link href="media">
+              <Link href="/media">
                 <a>Media</a>
               </Link>
-              <Link href="extra-information">
+              <Link href="/extra-information">
                 <a>Terms &amp; Conditions</a>
               </Link>
-              <Link href="extra-information#data-security">
+              <Link href="/extra-information#data-security">
                 <a>Data Security</a>
               </Link>
-              <Link href="extra-information#cookies">
+              <Link href="/extra-information#cookies">
                 <a>Cookie Policy</a>
               </Link>
-              <Link href="sitemap">
+              <Link href="/sitemap">
                 <a>Sitemap</a>
               </Link>
             </div>
@@ -129,13 +129,13 @@ const index = () => (
               <Link href="#">
                 <a>How to rent</a>
               </Link>
-              <Link href="pricing">
+              <Link href="/pricing">
                 <a>Pricing</a>
               </Link>
-              <Link href="international-students-expats">
+              <Link href="/international-students-expats">
                 <a>Blog for internationals</a>
               </Link>
-              <Link href={`rental-tips#${userTypes.TENANT}`}>
+              <Link href={`/rental-tips#${userTypes.TENANT}`}>
                 <a>Rental Tips</a>
               </Link>
             </div>
@@ -146,10 +146,10 @@ const index = () => (
               <Link href="#">
                 <a>How to rent out</a>
               </Link>
-              <Link href="pricing">
+              <Link href="/pricing">
                 <a>Pricing</a>
               </Link>
-              <Link href={`rental-tips#${userTypes.LANDLORD}`}>
+              <Link href={`/rental-tips#${userTypes.LANDLORD}`}>
                 <a>Rental Tips</a>
               </Link>
             </div>
@@ -157,13 +157,13 @@ const index = () => (
           <div className="col-6 col-md-4 col-lg header-column">
             <h3>Support</h3>
             <div className="list">
-              <Link href="faq">
+              <Link href="/faq">
                 <a>FAQ</a>
               </Link>
-              <Link href="contact">
+              <Link href="/contact">
                 <a>Contact Us</a>
               </Link>
-              <Link href="#">
+              <Link href="/careers">
                 <a>Careers</a>
               </Link>
             </div>

@@ -48,6 +48,11 @@
   &.min-width-100 {
     min-width: 100px;
   }
+
+  @include media-breakpoint-down(xs) {
+    padding: 8px 16px;
+    @include font(14px, $fw-light);
+  }
 }
 
 .button-nav {
@@ -61,6 +66,11 @@
   position: relative;
   @include flex(center, center);
   cursor: pointer;
+
+  @include media-breakpoint-down(xs) {
+    height: 28px;
+    width: 28px;
+  }
 
   img {
     width: 100%;

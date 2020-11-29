@@ -178,12 +178,17 @@
       cursor: pointer;
       transition: 300ms;
 
-      img {
-        width: 50%;
-      }
-
       @include media-breakpoint-down(sm) {
         margin-left: 15px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        height: 30px;
+        width: 30px;
+      }
+
+      img {
+        width: 50%;
       }
 
       &:hover {

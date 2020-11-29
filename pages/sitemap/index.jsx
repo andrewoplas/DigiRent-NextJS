@@ -35,46 +35,46 @@ const Page = () => (
         <Link href="media">
           <a>Media</a>
         </Link>
-        <Link href="extra-information">
+        <Link href="/extra-information">
           <a>Terms &amp; Conditions</a>
         </Link>
-        <Link href="extra-information#data-security">
+        <Link href="/extra-information#data-security">
           <a>Data Security</a>
         </Link>
-        <Link href="extra-information#cookies">
+        <Link href="/extra-information#cookies">
           <a>Cookie Policy</a>
         </Link>
-        <Link href="sitemap">
+        <Link href="/sitemap">
           <a>Sitemap</a>
         </Link>
         <Link href="#">
           <a>How to rent</a>
         </Link>
-        <Link href="pricing">
+        <Link href="/pricing">
           <a>Pricing</a>
         </Link>
-        <Link href="international-students-expats">
+        <Link href="/international-students-expats">
           <a>Blog for internationals</a>
         </Link>
-        <Link href={`rental-tips#${userTypes.TENANT}`}>
+        <Link href={`/rental-tips#${userTypes.TENANT}`}>
           <a>Rental Tips</a>
         </Link>
         <Link href="#">
           <a>How to rent out</a>
         </Link>
-        <Link href="pricing">
+        <Link href="/pricing">
           <a>Pricing</a>
         </Link>
-        <Link href={`rental-tips#${userTypes.TENANT}`}>
+        <Link href={`/rental-tips#${userTypes.TENANT}`}>
           <a>Rental Tips</a>
         </Link>
-        <Link href="faq">
+        <Link href="/faq">
           <a>FAQ</a>
         </Link>
-        <Link href="contact">
+        <Link href="/contact">
           <a>Contact Us</a>
         </Link>
-        <Link href="#">
+        <Link href="/careers">
           <a>Careers</a>
         </Link>
       </div>

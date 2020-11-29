@@ -6,7 +6,12 @@ export const reactionType = {
   DISLIKE: 'dislike',
 };
 
-export const SocialMedias = ({ classNames }) => {
+export const socialMediaDirection = {
+  LEFT: 'left',
+  RIGHT: 'right',
+};
+
+export const SocialMedias = ({ direction, classNames }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -16,7 +21,12 @@ export const SocialMedias = ({ classNames }) => {
         <img className="inactive-icon" src="/images/icon/icon-share-gray.svg" alt="item icon" />
       </div>
 
-      <div className="social-medias">
+      <div
+        className={cn('social-medias', {
+          left: direction === socialMediaDirection.LEFT,
+          right: direction === socialMediaDirection.RIGHT,
+        })}
+      >
         <div className="icons">
           <a href="#">
             <img src="/images/social-media/facebook.svg" className="icon" alt="facebook" />
@@ -37,4 +47,8 @@ export const SocialMedias = ({ classNames }) => {
       </div>
     </div>
   );
+};
+
+SocialMedias.defaultProps = {
+  direction: socialMediaDirection.LEFT,
 };

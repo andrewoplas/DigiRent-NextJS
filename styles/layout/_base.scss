@@ -145,6 +145,11 @@ body {
         padding-left: 25px !important;
         padding-right: 25px !important;
       }
+
+      @include media-breakpoint-down(xs) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
     }
   }
 }
@@ -198,4 +203,8 @@ textarea {
     color: $color-placeholder;
     font-weight: $fw-light;
   }
+}
+
+.ps__thumb-y {
+  background-color: $color-primary !important;
 }
