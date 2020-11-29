@@ -131,7 +131,7 @@
     bottom: 25px;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 1000;
 
     .main-box {
       @include flex(center, center);

@@ -2,7 +2,7 @@
 @import './abstract/mixins';
 @import './abstract/breakpoint';
 
-.layout-content.tenants-list {
+.layout-content.property-list {
   padding-top: 0;
   padding-bottom: 400px;
 
@@ -22,11 +22,15 @@
   }
 
   .left-main-background {
-    top: 140vh;
+    top: 160vh;
   }
 
   .right-main-background {
-    top: 90vh;
+    top: 100vh;
+  }
+
+  .container.max-width {
+    max-width: 1500px;
   }
 
   .main-title {
@@ -46,9 +50,9 @@
   .landing {
     min-height: 90vh;
     padding: 150px 0;
-    background-image: url('/images/property-tenants-bg.jpg');
+    background-image: url('/images/property-landlord-bg.jpg');
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: darken;
     background-color: rgba(255, 255, 255, 0.1);
@@ -179,7 +183,42 @@
     max-width: 1300px;
   }
 
-  .tenants {
+  .rental-houses-table-header {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .rental-houses {
+    margin-top: 150px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 100px;
+    }
+
+    .list {
+      margin-top: 50px;
+
+      .item {
+        margin-bottom: 30px;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: unset;
+        }
+      }
+    }
+  }
+
+  .recommendations {
     margin-top: 150px;
 
     @include media-breakpoint-down(sm) {
@@ -188,117 +227,68 @@
 
     .list {
       margin-top: 100px;
+      @include flex(center, center);
 
-      @include media-breakpoint-down(sm) {
-        margin-top: 75px;
+      @include media-breakpoint-down(md) {
+        margin-top: 50px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        margin-top: 25px;
+      }
+
+      .item {
+        padding-left: 35px;
+        padding-right: 35px;
+
+        .property-info {
+          margin: 0 0 15px 0;
+        }
+
+        @include media-breakpoint-only(sm) {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+
+        @include media-breakpoint-only(xs) {
+          padding: 5px;
+        }
+      }
+
+      .slick-list {
+        margin-left: 25px;
+        margin-right: 25px;
+
+        @include media-breakpoint-down(sm) {
+          margin-left: 0;
+          margin-right: 0;
+        }
       }
     }
 
-    .item {
-      margin-bottom: 150px;
-      position: relative;
+    @include media-breakpoint-up(xl) {
+      .slick-track {
+        .slick-slide,
+        .slick-active,
+        .slick-active + .slick-active + .slick-active {
+          opacity: 0.5;
+          transition: 300ms;
 
-      @include media-breakpoint-down(lg) {
-        margin-bottom: 100px;
-      }
-
-      .tenant-info {
-        width: 150px;
-        position: absolute;
-        top: -50px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        @include flex(center, center, column);
-      }
-
-      .top {
-        @include flex();
-        flex-direction: column;
-
-        .photo-holder {
-          width: 100%;
-          height: 300px;
-          background-image: url('/images/tenant-sample-photo.jpg');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          border-top-left-radius: $border-radius;
-          border-top-right-radius: $border-radius;
-          position: relative;
-          padding-top: 35px;
-          @include flex(flex-start, flex-start);
-
-          .photo-additional-bg {
-            position: absolute;
-            width: calc(100% + 2px);
-            bottom: -3px;
-          }
-
-          .status {
-            width: 100%;
-            @include flex(space-between, center);
-
-            .verified {
-              padding: 10px 20px;
-              color: white;
-              background-color: $color-green;
-              border-top-left-radius: 30px;
-              border-bottom-left-radius: 30px;
-              @include font(17px, $fw-light);
-            }
-
-            .profile-completion {
-              color: white;
-              padding: 3px 8px;
-              background-color: $color-primary;
-              display: inline-block;
-              @include font(12px, $fw-light);
-              border-top-right-radius: 30px;
-              border-bottom-right-radius: 30px;
-            }
-          }
-
-          .star-photo {
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            z-index: 1;
-            bottom: 70px;
-            right: 15px;
-            padding: 8px;
-            border-radius: 50%;
-            transition: 250ms;
-            cursor: pointer;
-
-            img {
-              width: 100%;
-            }
-
-            &:hover {
-              transition: 250ms;
-              background: rgba(0, 0, 0, 0.2);
-            }
+          .monthly-payment,
+          .rooms-toilet {
+            display: none;
+            transition: 300ms;
           }
         }
-      }
 
-      .bottom {
-        padding: 15px 25px 40px;
+        .slick-active + .slick-active {
+          opacity: 1;
+          transition: 300ms;
 
-        .searches {
-          @include flex(space-between, center);
-        }
-
-        .btn-about-me {
-          position: absolute;
-          bottom: -20px;
-          left: 0;
-          right: 0;
-          margin-left: auto;
-          margin-right: auto;
+          .monthly-payment,
+          .rooms-toilet {
+            display: flex;
+          }
         }
       }
     }
