@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import cn from 'classnames';
 
-const Input = ({ value, onChange, placeholder, icon, classNames, inputClassNames }) => (
+const Textarea = ({ value, onChange, placeholder, icon, classNames, inputClassNames }) => (
   <div className={cn('Input field-group', classNames)}>
     {icon && (
       <>
@@ -12,18 +11,19 @@ const Input = ({ value, onChange, placeholder, icon, classNames, inputClassNames
       </>
     )}
 
-    <input
+    <textarea
       className={cn(inputClassNames, { 'no-icon': !icon })}
-      type="text"
       placeholder={placeholder}
-      value={value}
       onChange={(e) => (onChange ? onChange(e.target.value) : null)}
-    />
+    >
+      {value}
+    </textarea>
   </div>
 );
 
-Input.defaultProps = {
+Textarea.defaultProps = {
   placeholder: '',
+  value: null,
 };
 
-export default Input;
+export default Textarea;

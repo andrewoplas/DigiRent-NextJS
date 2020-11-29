@@ -24,6 +24,7 @@
 @import 'components/reaction';
 @import 'components/social-media-wrapper';
 @import 'components/slick-arrows';
+@import 'components/check-box';
 
 // widgets
 @import 'widgets/property-info';
@@ -31,7 +32,6 @@
 @import 'widgets/blog-card';
 
 // pages
-
 @import 'pages/about';
 @import 'pages/faq';
 @import 'pages/sitemap';
@@ -53,3 +53,4 @@
 @import 'pages/blog';
 @import 'pages/homepage/homepage';
 @import 'pages/property/property';
+@import 'pages/property-add';

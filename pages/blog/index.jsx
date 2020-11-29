@@ -150,7 +150,7 @@ const Page = () => {
                     </div>
 
                     <button type="button" className="button">
-                      <img src="/images/icon/icon-caret-right-white.svg" alt="right arrow" />
+                      <img src="/images/icon/icon-caret-right-white.svg" alt="icon" />
                     </button>
                   </div>
                 ))}

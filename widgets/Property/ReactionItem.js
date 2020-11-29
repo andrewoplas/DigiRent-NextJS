@@ -1,8 +1,5 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
-import { NextArrow, PrevArrow } from 'components/SlickArrows';
 import { useState } from 'react';
-import Slider from 'react-slick';
-import { BlogCard } from 'widgets/BlogCard';
 
 const ReactionItem = () => {
   const [buttonOverlayVisible, setButtonOverlayVisible] = useState(false);
@@ -14,11 +11,11 @@ const ReactionItem = () => {
 
         <div className="user-name flex-1 text-center">
           <div className="d-flex align-items-center justify-content-center">
-            <span className="text-sm font-weight-bold">Tony</span>
+            <span className="text-sm font-weight-bold">Jane</span>
             <span className="text-sm">, 22</span>
             <img
               className="ml-2"
-              src="/images/icon/icon-camera-primary.svg"
+              src="/images/icon/icon-gender-primary.svg"
               height="15"
               width="15"
               alt="icon"
@@ -89,11 +86,11 @@ const ReactionItem = () => {
       <div className="item mobile d-block d-md-none">
         <div className="user-name text-center">
           <div className="d-flex align-items-center justify-content-center">
-            <span className="text-sm font-weight-bold">Tony</span>
+            <span className="text-sm font-weight-bold">Jane</span>
             <span className="text-sm">, 22</span>
             <img
               className="ml-2"
-              src="/images/icon/icon-camera-primary.svg"
+              src="/images/icon/icon-gender-primary.svg"
               height="15"
               width="15"
               alt="icon"

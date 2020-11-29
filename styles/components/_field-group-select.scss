@@ -1,11 +1,11 @@
-@import "../abstract/mixins";
-@import "../abstract/breakpoint";
-@import "../abstract/variables";
+@import '../abstract/mixins';
+@import '../abstract/breakpoint';
+@import '../abstract/variables';
 
 .field-group-select {
   @include flex($align-items: center);
   @include simple-shadow;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 20px;
   position: relative;
 
