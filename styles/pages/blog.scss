@@ -39,6 +39,10 @@
 
     .item {
       margin-bottom: 150px;
+
+      @include breakpoint-down(420px) {
+        margin-bottom: 75px;
+      }
     }
   }
 
