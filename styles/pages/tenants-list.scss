@@ -178,113 +178,113 @@
       @include media-breakpoint-down(sm) {
         margin-top: 75px;
       }
-    }
 
-    .item {
-      margin-bottom: 150px;
-      position: relative;
+      .item {
+        margin-bottom: 150px;
+        position: relative;
 
-      @include media-breakpoint-down(lg) {
-        margin-bottom: 100px;
-      }
-
-      .tenant-info {
-        width: 150px;
-        position: absolute;
-        top: -50px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        @include flex(center, center, column);
-      }
-
-      .top {
-        @include flex();
-        flex-direction: column;
-
-        .photo-holder {
-          width: 100%;
-          height: 300px;
-          background-image: url('/images/tenant-sample-photo.jpg');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          border-top-left-radius: $border-radius;
-          border-top-right-radius: $border-radius;
-          position: relative;
-          padding-top: 35px;
-          @include flex(flex-start, flex-start);
-
-          .photo-additional-bg {
-            position: absolute;
-            width: calc(100% + 2px);
-            bottom: -3px;
-          }
-
-          .status {
-            width: 100%;
-            @include flex(space-between, center);
-
-            .verified {
-              padding: 10px 20px;
-              color: white;
-              background-color: $color-green;
-              border-top-left-radius: 30px;
-              border-bottom-left-radius: 30px;
-              @include font(17px, $fw-light);
-            }
-
-            .profile-completion {
-              color: white;
-              padding: 3px 8px;
-              background-color: $color-primary;
-              display: inline-block;
-              @include font(12px, $fw-light);
-              border-top-right-radius: 30px;
-              border-bottom-right-radius: 30px;
-            }
-          }
-
-          .star-photo {
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            z-index: 1;
-            bottom: 70px;
-            right: 15px;
-            padding: 8px;
-            border-radius: 50%;
-            transition: 250ms;
-            cursor: pointer;
-
-            img {
-              width: 100%;
-            }
-
-            &:hover {
-              transition: 250ms;
-              background: rgba(0, 0, 0, 0.2);
-            }
-          }
-        }
-      }
-
-      .bottom {
-        padding: 15px 25px 40px;
-
-        .searches {
-          @include flex(space-between, center);
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 100px;
         }
 
-        .btn-about-me {
+        .tenant-info {
+          width: 150px;
           position: absolute;
-          bottom: -20px;
-          left: 0;
-          right: 0;
+          top: -50px;
           margin-left: auto;
           margin-right: auto;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          @include flex(center, center, column);
+        }
+
+        .top {
+          @include flex();
+          flex-direction: column;
+
+          .photo-holder {
+            width: 100%;
+            height: 300px;
+            background-image: url('/images/tenant-sample-photo.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+            position: relative;
+            padding-top: 35px;
+            @include flex(flex-start, flex-start);
+
+            .photo-additional-bg {
+              position: absolute;
+              width: calc(100% + 2px);
+              bottom: -3px;
+            }
+
+            .status {
+              width: 100%;
+              @include flex(space-between, center);
+
+              .verified {
+                padding: 10px 20px;
+                color: white;
+                background-color: $color-green;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                @include font(17px, $fw-light);
+              }
+
+              .profile-completion {
+                color: white;
+                padding: 3px 8px;
+                background-color: $color-primary;
+                display: inline-block;
+                @include font(12px, $fw-light);
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+              }
+            }
+
+            .star-photo {
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              z-index: 1;
+              bottom: 70px;
+              right: 15px;
+              padding: 8px;
+              border-radius: 50%;
+              transition: 250ms;
+              cursor: pointer;
+
+              img {
+                width: 100%;
+              }
+
+              &:hover {
+                transition: 250ms;
+                background: rgba(0, 0, 0, 0.2);
+              }
+            }
+          }
+        }
+
+        .bottom {
+          padding: 15px 25px 40px;
+
+          .searches {
+            @include flex(space-between, center);
+          }
+
+          .btn-about-me {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+          }
         }
       }
     }
