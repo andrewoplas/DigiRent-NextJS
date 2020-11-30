@@ -31,20 +31,6 @@
     top: 90vh;
   }
 
-  .main-title {
-    @include font(26px, $fw-light);
-    @include clear-spacing;
-    text-align: center;
-
-    @include media-breakpoint-down(md) {
-      font-size: 24px;
-    }
-
-    @include media-breakpoint-down(xs) {
-      font-size: 20px;
-    }
-  }
-
   .landing {
     min-height: 90vh;
     background-image: url('/images/property-bg.jpg');

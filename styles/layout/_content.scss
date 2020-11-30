@@ -6,23 +6,31 @@
   padding-top: 160px;
 
   .main-title {
-    @include font(35px, $fw-light);
+    @include font(30px, $fw-light);
     @include clear-spacing;
     text-align: center;
 
+    @include media-breakpoint-down(md) {
+      font-size: 27px;
+    }
+
     @include media-breakpoint-down(xs) {
-      font-size: 28px;
+      font-size: 25px;
     }
   }
 
   .main-title-2 {
-    @include font(25px, $fw-light);
+    @include font(24px, $fw-light);
     @include clear-spacing;
     text-align: center;
     line-height: 25px;
 
+    @include media-breakpoint-down(md) {
+      font-size: 23px;
+    }
+
     @include media-breakpoint-down(xs) {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
@@ -31,6 +39,10 @@
     @include font(20px, $fw-light);
     text-align: center;
     line-height: 28px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 18px;
+    }
 
     @include media-breakpoint-down(xs) {
       font-size: 16px;
@@ -65,6 +77,10 @@
     @include clear-spacing;
     line-height: 28px;
     color: $color-dark-gray;
+
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+    }
 
     @include media-breakpoint-down(sm) {
       font-size: 15px;
