@@ -1,10 +1,11 @@
+import cn from 'classnames';
 import { Select } from 'components/Select/index';
+import Link from 'next/link';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import PageWrapper from 'widgets/PageWrapper';
 import ReactionItem from 'widgets/Property/ReactionItem';
 import { PropertyInfo, propertyInfoSelectionType } from 'widgets/PropertyInfo/index';
-import cn from 'classnames';
 
 const yearOptions = [
   { name: 'OPTION 1', value: 1 },
@@ -225,9 +226,11 @@ const Page = () => {
             </p>
 
             <div className="mt-4 buttons">
-              <button type="button" className="button btn-yes" onClick={onCloseAddPropertyModal}>
-                <span className="font-weight-bold">ADD</span> NEW PROPERTY
-              </button>
+              <Link href="/property/add">
+                <button type="button" className="button btn-yes">
+                  <span className="font-weight-bold">ADD</span> NEW PROPERTY
+                </button>
+              </Link>
               <button
                 type="button"
                 className="button gray2 btn-no"

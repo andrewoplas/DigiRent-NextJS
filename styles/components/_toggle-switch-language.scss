@@ -16,6 +16,7 @@
         &:checked + label {
           &:after {
             content: 'NL';
+            background: $color-primary !important;
           }
         }
       }

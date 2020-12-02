@@ -31,12 +31,12 @@ const WhyChooseDigiRentOverAnyAgency = () => (
           </p>
         </div>
         <div className="column-2">
-          <span className="main-desc text-primary">
+          <span className="main-desc digirent-fee text-primary">
             €<span className="font-weight-bold"> 39</span>
           </span>
         </div>
         <div className="column-3">
-          <span className="main-desc text-center">
+          <span className="main-desc traditional-fee text-center">
             <span className="font-weight-bold">100</span> %
             <br />
             <span>of a month&apos;s rent</span>

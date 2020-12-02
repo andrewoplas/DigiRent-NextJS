@@ -3,8 +3,61 @@ import { getDistance } from 'shared/functions';
 import { userTypes } from 'shared/types';
 import { UserSelect } from 'widgets/UserSelect';
 
-const HowDoesItWork = () => {
-  const [selectedUserType, setSelectedUserType] = useState(userTypes.TENANT);
+const landlordData = {
+  step1: {
+    title: 'List your house online',
+    description:
+      'Upload your house and images and make sure that your house is seen by thousand tenants that are looking for the right space to live in. It’s never been easier to find so much screened tenants',
+    src: '/images/steps-list-your-house-online.png',
+  },
+  step2: {
+    title: 'Get in touch with tenants and match',
+    description:
+      'Our screened database will automatically connect you to the right tenants. You can send out messages if they already didn’t apply for your house as they will receive automatic messages. In a matter of seconds, you will know who your next tenant will be',
+    src: '/images/steps-get-in-touch.png',
+  },
+  step3: {
+    title: 'Sign documents online',
+    description:
+      'Get a signed legally binding document back without wasting time on coordinating a personal meeting. Digi Rent uses a secure sign service to provide you with a convenient online signing that will save you valuable time',
+    src: '/images/steps-sign-docu-online.png',
+  },
+  step4: {
+    title: 'Receive your payments digitally',
+    description:
+      'All international payment methods are accepted on our secured platform, where ever you or your tenant are based, you can collect your rent, deposit or any other fees. The first month’s rent is paid the moment your property is booked. It is fast, flexible and fully transparent',
+    src: '/images/steps-money-online.png',
+  },
+};
+
+const tenantData = {
+  step1: {
+    title: 'Sign Up',
+    description:
+      'Sign up or use our easy sign-in via Facebook or Gmail. Receive weekly updates with your preferences!',
+    src: '/images/steps-sign-up.png',
+  },
+  step2: {
+    title: 'Search and apply',
+    description:
+      'We have an extensive database where you can search for your perfect home. Apply directly and get a reply from the Landlord within 48 hours.',
+    src: '/images/steps-search-and-apply.png',
+  },
+  step3: {
+    title: 'Sign documents online',
+    description:
+      'Digi Rent uses a secure sign service to provide you with a convenient online signing that will save you valuable time. E-signature is a great substitute for signing papers by hand. ',
+    src: '/images/steps-sign-docu-online.png',
+  },
+  step4: {
+    title: 'Welcome to your new home',
+    description: 'Plan your arrival with your Landlord and enjoy your new place to stay!',
+    src: '/images/steps-welcome-to-your-new-home.png',
+  },
+};
+
+const HowDoesItWork = ({ selectedUserType, setSelectedUserType }) => {
+  const [data, setData] = useState(tenantData);
 
   const step1 = useRef(null);
   const step2 = useRef(null);
@@ -32,7 +85,17 @@ const HowDoesItWork = () => {
       const height = divider1.current.getBoundingClientRect().height + distance;
       line.current.style.height = `${height}px`;
     }
-  }, [step1, step2, step3, step4, divider2, divider3, divider4, line]);
+  }, [step1, step2, step3, step4, divider2, divider3, divider4, line, data]);
+
+  const onSelectUserType = (userType) => {
+    setSelectedUserType(userType);
+
+    if (userType === userTypes.TENANT) {
+      setData(tenantData);
+    } else {
+      setData(landlordData);
+    }
+  };
 
   return (
     <div className="how-does-it-work container">
@@ -49,7 +112,7 @@ const HowDoesItWork = () => {
       <UserSelect
         classNames="homepage-user-select"
         selected={selectedUserType}
-        onSelect={setSelectedUserType}
+        onSelect={onSelectUserType}
       />
 
       <div className="steps">
@@ -59,15 +122,11 @@ const HowDoesItWork = () => {
               1
             </span>
             <div className="rounded-icon not-responsive">
-              <img src="/images/step-list-your-house-online.png" alt="item icon" />
+              <img src={data.step1.src} alt="item icon" />
             </div>
             <div className="main-box">
-              <p className="main-desc font-weight-bold title">List your house online</p>
-              <p className="main-desc">
-                Upload your house and images and make sure that your house is seen by thousand
-                tenants that are looking for the right space to live in. It’s never been easier to
-                find so much screened tenants
-              </p>
+              <p className="main-desc font-weight-bold title">{data.step1.title}</p>
+              <p className="main-desc">{data.step1.description}</p>
             </div>
           </div>
 
@@ -76,15 +135,11 @@ const HowDoesItWork = () => {
               3
             </span>
             <div className="rounded-icon not-responsive">
-              <img src="/images/steps-sign-docu-online.png" alt="item icon" />
+              <img src={data.step3.src} alt="item icon" />
             </div>
             <div className="main-box">
-              <p className="main-desc font-weight-bold title">Sign documents online</p>
-              <p className="main-desc">
-                Get a signed legally binding document back without wasting time on coordinating a
-                personal meeting. Digi Rent uses a secure sign service to provide you with a
-                convenient online signing that will save you valuable time
-              </p>
+              <p className="main-desc font-weight-bold title">{data.step3.title}</p>
+              <p className="main-desc">{data.step3.description}</p>
             </div>
           </div>
         </div>
@@ -103,18 +158,11 @@ const HowDoesItWork = () => {
               2
             </span>
             <div className="main-box">
-              <p className="main-desc font-weight-bold title">
-                Get in touch with tenants and match
-              </p>
-              <p className="main-desc">
-                Our screened database will automatically connect you to the right tenants. You can
-                send out messages if they already didn’t apply for your house as they will receive
-                automatic messages. In a matter of seconds, you will know who your next tenant will
-                be
-              </p>
+              <p className="main-desc font-weight-bold title">{data.step2.title}</p>
+              <p className="main-desc">{data.step2.description}</p>
             </div>
             <div className="rounded-icon not-responsive">
-              <img src="/images/step-get-in-touch.png" alt="item icon" />
+              <img src={data.step2.src} alt="item icon" />
             </div>
           </div>
 
@@ -123,16 +171,11 @@ const HowDoesItWork = () => {
               4
             </span>
             <div className="main-box">
-              <p className="main-desc font-weight-bold title">Receive your payments digitally</p>
-              <p className="main-desc">
-                All international payment methods are accepted on our secured platform, where ever
-                you or your tenant are based, you can collect your rent, deposit or any other fees.
-                The first month’s rent is paid the moment your property is booked. It is fast,
-                flexible and fully transparent
-              </p>
+              <p className="main-desc font-weight-bold title">{data.step4.title}</p>
+              <p className="main-desc">{data.step4.description}</p>
             </div>
             <div className="rounded-icon not-responsive">
-              <img src="/images/steps-money-online.png" alt="item icon" />
+              <img src={data.step4.src} alt="item icon" />
             </div>
           </div>
         </div>

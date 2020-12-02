@@ -1,6 +1,7 @@
 import { PrevArrow } from 'components/SlickArrows';
 import { NextArrow } from 'components/SlickArrows';
 import Slider from 'react-slick';
+import Link from 'next/link';
 
 const cities = [
   '/images/city-1.jpg',
@@ -28,7 +29,7 @@ const citiesSlickSettings = {
   ],
 };
 
-export const ExploreOurMosePopularCities = () => (
+const ExploreOurMosePopularCities = () => (
   <div className="explore-our-most-popular-cities container-fluid">
     <h3 className="main-title">
       EXPLORE OUR MOST <span className="text-primary font-weight-bold">POPULAR CITIES</span>
@@ -42,7 +43,9 @@ export const ExploreOurMosePopularCities = () => (
         <div key={index} className="item">
           <div className="city" style={{ backgroundImage: `url(${cityImage})` }}>
             <h3 className="title text-white">THE CITY</h3>
-            <button className="button min-width">VIEW</button>
+            <Link href="/property-list">
+              <button className="button min-width">VIEW</button>
+            </Link>
           </div>
         </div>
       ))}

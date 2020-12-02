@@ -121,6 +121,7 @@ const Page = () => (
                 bedCount="4"
                 crCount="2"
                 houseImage={`/images/house-sample-${(index % 3) + 1}.jpg`}
+                link="/property-details"
               />
             </div>
           ))}

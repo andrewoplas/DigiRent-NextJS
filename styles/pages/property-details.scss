@@ -34,7 +34,6 @@ $main-border-radius: 30px;
       @include flex(space-between, flex-start);
       @include simple-shadow;
 
-      background-image: url('/images/property-detail-sample.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -67,6 +66,14 @@ $main-border-radius: 30px;
           transition: 250ms;
           background: rgba(0, 0, 0, 0.2);
         }
+      }
+
+      .slick-arrows-container {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 45%;
+        @include flex(space-between, center);
       }
     }
 

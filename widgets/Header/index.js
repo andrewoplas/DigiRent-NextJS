@@ -17,23 +17,25 @@ const index = () => (
       <div className="header-menu">
         <div className="header-menu-wrapper">
           <div className="note">
-            <span>List a property</span>
+            <Link href="/property">
+              <span>List a property</span>
+            </Link>
           </div>
 
           <div className="main-menu">
-            <Link href="#">
+            <Link href="/property">
               <a className="px-2 uppercase text-white">Properties</a>
             </Link>
             <span>|</span>
-            <Link href="messages">
+            <Link href="/messages">
               <a className="px-2 uppercase text-white">Messages</a>
             </Link>
             <span>|</span>
-            <Link href="payments-landlord">
+            <Link href="/payments-landlord">
               <a className="px-2 uppercase text-white">Payments</a>
             </Link>
             <span>|</span>
-            <Link href="contracts-landlord">
+            <Link href="/contracts-landlord">
               <a className="px-2 uppercase text-white">Contracts</a>
             </Link>
           </div>

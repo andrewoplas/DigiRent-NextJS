@@ -32,13 +32,13 @@ const HomePageHeader = ({ onLoginClick, onRegisterClick }) => {
           </div>
 
           <div className="main-menu">
-            <Link href="#">
+            <Link href="property-list">
               <p className="links">RENTALS</p>
             </Link>
             <Link href="messages">
               <p className="links mx-3 mx-md-5">INFORMATION</p>
             </Link>
-            <Link href="payments-landlord">
+            <Link href="/landlord">
               <p className="links">RENT OUT</p>
             </Link>
           </div>

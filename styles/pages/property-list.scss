@@ -252,6 +252,15 @@
       }
     }
 
+    .slick-active,
+    .slick-active + .slick-active + .slick-active {
+      pointer-events: none;
+    }
+
+    .slick-active + .slick-active {
+      pointer-events: unset;
+    }
+
     @include media-breakpoint-up(xl) {
       .slick-track {
         .slick-slide,

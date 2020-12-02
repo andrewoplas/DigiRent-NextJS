@@ -218,8 +218,19 @@
 
             .photo-additional-bg {
               position: absolute;
-              width: calc(100% + 2px);
+              width: calc(100% + 4px);
+              left: -2px;
+              right: -2px;
               bottom: -3px;
+
+              background-image: url('/images/account-profile-bg.svg');
+              background-position: top;
+              background-size: cover;
+
+              img {
+                width: 100%;
+                opacity: 0;
+              }
             }
 
             .status {
@@ -277,16 +288,24 @@
             @include flex(space-between, center);
           }
 
-          .btn-about-me {
+          .btn-about-me-container {
             position: absolute;
-            bottom: -20px;
+            width: 100%;
             left: 0;
             right: 0;
-            margin-left: auto;
-            margin-right: auto;
+            bottom: -20px;
           }
         }
       }
     }
+  }
+}
+
+.about-me-modal {
+  .modal-dialog {
+    max-width: 560px !important;
+  }
+  button {
+    font-size: 14px;
   }
 }
