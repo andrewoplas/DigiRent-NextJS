@@ -2,12 +2,37 @@
 /* eslint-disable react/prop-types */
 
 import 'bootstrap/dist/css/bootstrap.css';
+import rootReducer from 'ducks';
+import 'react-day-picker/lib/style.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { persistReducer, persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+import storage from 'redux-persist/lib/storage';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import 'react-perfect-scrollbar/dist/css/styles.css';
-import 'react-day-picker/lib/style.css';
 import '../styles/main.scss';
 
-const App = ({ Component, pageProps }) => <Component {...pageProps} />;
+export const STORAGE_KEY = 'digirent';
+
+const App = ({ Component, pageProps }) => {
+  const persistConfig = {
+    key: STORAGE_KEY,
+    storage,
+    blacklist: [],
+    keyPrefix: '',
+  };
+  const persistedReducer = persistReducer(persistConfig, rootReducer);
+  const store = createStore(persistedReducer, {});
+
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistStore(store)}>
+        <Component {...pageProps} />
+      </PersistGate>
+    </Provider>
+  );
+};
 
 export default App;

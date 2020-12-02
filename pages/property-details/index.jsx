@@ -18,6 +18,7 @@ const recentlyViewedSettings = {
   slidesToShow: 4,
   slidesToScroll: 1,
   infinite: true,
+  swipe: false,
   responsive: [
     {
       breakpoint: 1599,
@@ -67,6 +68,7 @@ const PropertyDetail = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
+    focusOnSelect: true,
     beforeChange: function (oldIndex, newIndex) {
       setMainImage(houseInsides[newIndex].image);
     },
@@ -155,8 +157,18 @@ const PropertyDetail = () => {
             </div>
 
             <button className="btn-open-map">
-              <img src="/images/icon/icon-open-map-primary.svg" height="30" width="30" alt="icon" />
-              <span>OPEN MAP</span>
+              <a
+                href="https://www.google.co.uk/maps/place/Indore,+Madhya+Pradesh,+India/@22.7241158,75.8463378,14z/data=!4m5!3m4!1s0x3962fcad1b410ddb:0x96ec4da356240f4!8m2!3d22.7195687!4d75.8577258"
+                target="_blank"
+              >
+                <img
+                  src="/images/icon/icon-open-map-primary.svg"
+                  height="30"
+                  width="30"
+                  alt="icon"
+                />
+                <span>OPEN MAP</span>
+              </a>
             </button>
           </div>
 
@@ -327,6 +339,7 @@ const RecentlyViewed = () => (
               bedCount="4"
               crCount="2"
               houseImage={`/images/house-sample-${(index % 3) + 1}.jpg`}
+              link="/property-details"
             />
           </div>
         ))}

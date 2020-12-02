@@ -1,11 +1,8 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { ToggleSwitch } from 'components/ToggleSwitch';
 import Link from 'next/link';
 import { slide as Menu } from 'react-burger-menu';
-
-const languageSwitchOptions = {
-  EN: 'EN',
-  NL: 'NL',
-};
+import { languageSwitchOptions } from 'shared/types';
 
 const HomePageMenu = ({
   isVisible,
@@ -28,14 +25,34 @@ const HomePageMenu = ({
       <img src="/images/icon/icon-cancel-dark-gray.svg" alt="icon" />
     </button>
     <div className="main-links">
-      <Link href="#">
+      <Link href="/property-list">
         <p className="links">RENTALS</p>
       </Link>
-      <Link href="messages">
-        <p className="links">INFORMATION</p>
+      <Link href="#for-tenants">
+        <p onClick={onClose} className="links">
+          HOW TO RENT
+        </p>
       </Link>
-      <Link href="payments-landlord">
-        <p className="links">RENT OUT</p>
+
+      <Link href="/pricing">
+        <p className="links">PRICING</p>
+      </Link>
+
+      <Link href="/rental-tips">
+        <p className="links">RENTAL TIPS</p>
+      </Link>
+
+      <Link href="/about">
+        <p className="links">ABOUT US</p>
+      </Link>
+
+      <Link href="/media">
+        <p className="links">MEDIA</p>
+      </Link>
+      <Link href="#for-landlords">
+        <p onClick={onClose} className="links">
+          RENT OUT
+        </p>
       </Link>
 
       <hr />

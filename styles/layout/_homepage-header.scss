@@ -52,6 +52,12 @@
       .links {
         color: $color-primary !important;
       }
+
+      .information-container {
+        .information-links {
+          background-color: white !important;
+        }
+      }
     }
 
     .portal-choices {
@@ -69,6 +75,7 @@
       padding: 13px 22px;
       border-radius: 10px;
       background-color: $color-primary;
+      cursor: pointer;
 
       .text {
         color: white;
@@ -118,6 +125,50 @@
     .main-menu {
       transition: 300ms;
       @include flex();
+
+      .information-container {
+        position: relative;
+
+        &.active {
+          .information-links {
+            display: block;
+          }
+
+          .icon-caret {
+            transform: rotate(180deg) !important;
+          }
+        }
+
+        .information-link-container {
+          cursor: pointer;
+          @include flex(center, center);
+
+          .icon-caret {
+            margin-top: -2px;
+            margin-left: 10px;
+            width: 12px;
+            transform: rotate(0);
+            transition: 300ms;
+          }
+        }
+
+        .information-links {
+          padding: 10px;
+          margin-top: 10px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          border-radius: $border-radius;
+          background-color: $color-primary;
+          display: none;
+          @include simple-shadow;
+
+          .links {
+            text-align: center;
+            padding: 8px 0;
+          }
+        }
+      }
     }
 
     .portal-choices {

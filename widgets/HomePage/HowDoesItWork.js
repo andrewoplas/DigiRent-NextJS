@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 import { getDistance } from 'shared/functions';
 import { userTypes } from 'shared/types';
@@ -57,6 +59,7 @@ const tenantData = {
 };
 
 const HowDoesItWork = ({ selectedUserType, setSelectedUserType }) => {
+  const router = useRouter();
   const [data, setData] = useState(tenantData);
 
   const step1 = useRef(null);
@@ -97,8 +100,22 @@ const HowDoesItWork = ({ selectedUserType, setSelectedUserType }) => {
     }
   };
 
+  // Effect: Get hash value
+  useEffect(() => {
+    const hashValue = router.asPath.split('#')?.[1];
+    if (hashValue === 'for-landlords') {
+      onSelectUserType(userTypes.LANDLORD);
+    }
+
+    if (hashValue === 'for-tenants') {
+      onSelectUserType(userTypes.TENANT);
+    }
+  }, [router]);
+
   return (
     <div className="how-does-it-work container">
+      <div id="for-landlords" />
+      <div id="for-tenants" />
       <h3 className="main-title">
         HOW DOES IT <span className="text-primary font-weight-bold">WORK?</span>
       </h3>

@@ -31,7 +31,9 @@
         "map": [
           ["components", "./components"],
           ["shared", "./shared"],
-          ["widgets", "./widgets"]
+          ["widgets", "./widgets"],
+          ["ducks", "./ducks"],
+          ["hooks", "./hooks"]
         ],
         "extensions": [".ts", ".js", ".jsx", ".json"]
       }

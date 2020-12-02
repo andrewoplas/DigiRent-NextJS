@@ -8,7 +8,9 @@ const index = () => (
     <section className="layout-header">
       <div className="header-logo-user">
         <div className="logo">
-          <h1 className="text">DIGI RENT</h1>
+          <Link href="/">
+            <h1 className="text">DIGI RENT</h1>
+          </Link>
         </div>
 
         <div className="user" />

@@ -11,6 +11,7 @@ const slickSettings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   infinite: true,
+  swipe: false,
   responsive: [
     {
       breakpoint: 1199,
@@ -81,6 +82,7 @@ const Page = () => (
                 rentFee="246"
                 bedCount="4"
                 crCount="2"
+                link="/property-details"
               />
             </div>
           ))}

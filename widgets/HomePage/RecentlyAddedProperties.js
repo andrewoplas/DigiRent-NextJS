@@ -7,7 +7,8 @@ const propertiesSlickSettings = {
   prevArrow: <PrevArrow />,
   slidesToShow: 3,
   slidesToScroll: 1,
-  infinite: false,
+  swipe: false,
+  infinite: true,
   responsive: [
     {
       breakpoint: 1199,
@@ -49,6 +50,7 @@ const RecentlyAddedProperties = () => (
             crCount="2"
             houseImage={`/images/house-sample-${(index % 3) + 1}.jpg`}
             showSelection={false}
+            link="/property-details"
           />
         </div>
       ))}

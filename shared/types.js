@@ -10,3 +10,8 @@ export const moveInScenarioTypes = {
   ATTACH: 'ATTACH',
   NO_NEED: 'NO_NEED',
 };
+
+export const languageSwitchOptions = {
+  EN: 'en',
+  NL: 'nl',
+};
