@@ -77,7 +77,7 @@ const AreasOfExpertise = () => (
 
       <div className="item">
         <div className="rounded-icon icon not-responsive mx-auto">
-          <img src="/images/step-list-your-house-online.png" alt="item icon" />
+          <img src="/images/steps-list-your-house-online.png" alt="item icon" />
         </div>
 
         <div className="outer-circle">

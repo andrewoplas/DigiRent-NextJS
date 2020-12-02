@@ -24,6 +24,27 @@ const index = ({ title, pageName, children }) => (
       <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff" />
       <title>{title}</title>
+
+      <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `Weglot?.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5'});`,
+        }}
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.Widget = { key: '5f89dd860307c' };
+              (function (e, t) {
+              var n = e.createElement(t);
+              n.async = true;
+              n.src = 'https://static.futy-widget.com/js/widget.js';
+              var r = e.getElementsByTagName(t)[0];
+              r.parentNode.insertBefore(n, r);
+              })(document, 'script');
+                  `,
+        }}
+      ></script>
     </Head>
 
     <Header />
