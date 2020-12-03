@@ -42,6 +42,12 @@
             margin-top: -40px;
           }
 
+          @include breakpoint-down(425px) {
+            margin-top: -35px;
+            height: 80px;
+            width: 80px;
+          }
+
           img {
             width: 60%;
           }
@@ -57,7 +63,7 @@
           border-radius: 50%;
           background-color: white;
 
-          @include breakpoint-down(380px) {
+          @include breakpoint-down(425px) {
             border-radius: $border-radius;
           }
 
@@ -84,7 +90,7 @@
                 padding: 40px;
               }
 
-              @include breakpoint-down(380px) {
+              @include breakpoint-down(425px) {
                 padding: 50px 15px 25px;
                 border-radius: $border-radius;
                 width: calc(100% - 15px);

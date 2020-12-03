@@ -12,8 +12,8 @@ const cities = [
 ];
 
 const citiesSlickSettings = {
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow responsive />,
+  prevArrow: <PrevArrow responsive />,
   centerMode: true,
   centerPadding: '0',
   infinite: true,

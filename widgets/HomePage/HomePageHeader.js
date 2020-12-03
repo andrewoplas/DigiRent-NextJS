@@ -38,12 +38,12 @@ const HomePageHeader = ({ onLoginClick, onRegisterClick }) => {
             </Link>
 
             <div
-              className={cn('information-container', { active: isInformationVisible })}
+              className={cn('information-container mx-3 mx-md-4', { active: isInformationVisible })}
               tabIndex="0"
               onBlur={() => setIsInformationVisible(false)}
             >
               <div
-                className="information-link-container mx-3 mx-md-5"
+                className="information-link-container px-2"
                 onClick={() => setIsInformationVisible((value) => !value)}
               >
                 <p className="links">INFORMATION</p>

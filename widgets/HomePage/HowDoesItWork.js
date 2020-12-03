@@ -202,49 +202,32 @@ const HowDoesItWork = ({ selectedUserType, setSelectedUserType }) => {
         <div className="item">
           <span className="step-count">1</span>
           <div className="main-box">
-            <p className="main-desc font-weight-bold title">List your house online</p>
-            <p className="main-desc">
-              Upload your house and images and make sure that your house is seen by thousand tenants
-              that are looking for the right space to live in. It’s never been easier to find so
-              much screened tenants
-            </p>
+            <p className="main-desc font-weight-bold title">{data.step1.title}</p>
+            <p className="main-desc">{data.step1.description}</p>
           </div>
         </div>
 
         <div className="item">
           <span className="step-count">2</span>
           <div className="main-box">
-            <p className="main-desc font-weight-bold title">Get in touch with tenants and match</p>
-            <p className="main-desc">
-              Our screened database will automatically connect you to the right tenants. You can
-              send out messages if they already didn’t apply for your house as they will receive
-              automatic messages. In a matter of seconds, you will know who your next tenant will be
-            </p>
+            <p className="main-desc font-weight-bold title">{data.step2.title}</p>
+            <p className="main-desc">{data.step2.description}</p>
           </div>
         </div>
 
         <div className="item">
           <span className="step-count">3</span>
           <div className="main-box">
-            <p className="main-desc font-weight-bold title">Sign documents online</p>
-            <p className="main-desc">
-              Get a signed legally binding document back without wasting time on coordinating a
-              personal meeting. Digi Rent uses a secure sign service to provide you with a
-              convenient online signing that will save you valuable time
-            </p>
+            <p className="main-desc font-weight-bold title">{data.step3.title}</p>
+            <p className="main-desc">{data.step3.description}</p>
           </div>
         </div>
 
         <div className="item">
           <span className="step-count">4</span>
           <div className="main-box">
-            <p className="main-desc font-weight-bold title">Receive your payments digitally</p>
-            <p className="main-desc">
-              All international payment methods are accepted on our secured platform, where ever you
-              or your tenant are based, you can collect your rent, deposit or any other fees. The
-              first month’s rent is paid the moment your property is booked. It is fast, flexible
-              and fully transparent
-            </p>
+            <p className="main-desc font-weight-bold title">{data.step4.title}</p>
+            <p className="main-desc">{data.step4.description}</p>
           </div>
         </div>
       </div>

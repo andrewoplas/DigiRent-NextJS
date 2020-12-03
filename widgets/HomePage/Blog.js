@@ -38,8 +38,8 @@ const blogs = [
 ];
 
 const blogsSlickSettings = {
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow responsive />,
+  prevArrow: <PrevArrow responsive />,
   slidesToShow: 3,
   slidesToScroll: 1,
   infinite: true,

@@ -2,8 +2,8 @@ import { NextArrow, PrevArrow } from 'components/SlickArrows';
 import Slider from 'react-slick';
 
 const expertiseSlickSettings = {
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow responsive />,
+  prevArrow: <PrevArrow responsive />,
   slidesToShow: 2,
   slidesToScroll: 1,
   infinite: false,
