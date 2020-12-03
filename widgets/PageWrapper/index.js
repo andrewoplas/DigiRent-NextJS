@@ -73,12 +73,9 @@ const index = ({ title, pageName, children }) => {
                   Weglot.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5', hide_switcher: true});
                   window.Weglot = Weglot;
                   Weglot.switchTo('${language}');  
-
-                  return;
                 } else {
                   Weglot.switchTo('${language}');  
                 }
-
               }
              }, 2000);
             `,

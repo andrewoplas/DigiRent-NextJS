@@ -54,8 +54,13 @@ const HomePageWrapper = ({ title, onLoginClick, onRegisterClick, children }) => 
           dangerouslySetInnerHTML={{
             __html: `
               if(typeof Weglot !== 'undefined') {
-                Weglot?.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5', hide_switcher: true});
-                Weglot?.switchTo('${language}');
+                if(!Weglot.initialized) {
+                  Weglot.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5', hide_switcher: true});
+                  window.Weglot = Weglot;
+                  Weglot.switchTo('${language}');  
+                } else {
+                  Weglot.switchTo('${language}');  
+                }
               }
             `,
           }}
