@@ -16,23 +16,21 @@ import '../styles/main.scss';
 
 export const STORAGE_KEY = 'digirent';
 
-const App = ({ Component, pageProps }) => {
-  const persistConfig = {
-    key: STORAGE_KEY,
-    storage,
-    blacklist: [],
-    keyPrefix: '',
-  };
-  const persistedReducer = persistReducer(persistConfig, rootReducer);
-  const store = createStore(persistedReducer, {});
-
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistStore(store)}>
-        <Component {...pageProps} />
-      </PersistGate>
-    </Provider>
-  );
+const persistConfig = {
+  key: STORAGE_KEY,
+  storage,
+  blacklist: ['_persist'],
+  keyPrefix: '',
 };
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+const store = createStore(persistedReducer, {});
+
+const App = ({ Component, pageProps }) => (
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistStore(store)}>
+      <Component {...pageProps} />
+    </PersistGate>
+  </Provider>
+);
 
 export default App;

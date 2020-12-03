@@ -1,11 +1,24 @@
 import cn from 'classnames';
 import { useLanguage } from 'hooks/useLanguage';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import Footer from 'widgets/Footer';
 import Header from 'widgets/Header';
 
 const index = ({ title, pageName, children }) => {
-  const { language } = useLanguage();
+  const { language, setLanguage } = useLanguage();
+
+  useEffect(() => {
+    if (!window.Weglot) {
+      setLanguage(language);
+    }
+  }, [window, title]);
+
+  useEffect(() => {
+    if (window.Weglot && window.Weglot.initialized) {
+      window.Weglot.switchTo('nl');
+    }
+  }, [window, language]);
 
   return (
     <div className="page-wrapper">
@@ -50,13 +63,24 @@ const index = ({ title, pageName, children }) => {
         ></script>
 
         <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
+            setTimeout(function(){ 
               if(typeof Weglot !== 'undefined') {
-                Weglot?.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5', hide_switcher: true});
-                Weglot?.switchTo('${language}');
+                if(!Weglot.initialized) {
+                  Weglot.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5', hide_switcher: true});
+                  window.Weglot = Weglot;
+                  Weglot.switchTo('${language}');  
+
+                  return;
+                } else {
+                  Weglot.switchTo('${language}');  
+                }
+
               }
+             }, 2000);
             `,
           }}
         ></script>

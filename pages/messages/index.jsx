@@ -122,9 +122,9 @@ const Page = () => (
             </PerfectScrollbar>
             <div className="footer">
               <textarea placeholder="Message" />
-              <buton className="button">
+              <button className="button">
                 <img src="/images/icon/icon-email-outline.svg" alt="email icon" />
-              </buton>
+              </button>
             </div>
           </div>
         </div>
