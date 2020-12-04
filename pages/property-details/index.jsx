@@ -159,10 +159,7 @@ const PropertyDetail = () => {
             </div>
 
             <button className="btn-open-map">
-              <a
-                href="https://www.google.co.uk/maps/place/Indore,+Madhya+Pradesh,+India/@22.7241158,75.8463378,14z/data=!4m5!3m4!1s0x3962fcad1b410ddb:0x96ec4da356240f4!8m2!3d22.7195687!4d75.8577258"
-                target="_blank"
-              >
+              <a href="https://goo.gl/maps/8v5n9qm6QhgUoDCPA" target="_blank" rel="noreferrer">
                 <img
                   src="/images/icon/icon-open-map-primary.svg"
                   height="30"

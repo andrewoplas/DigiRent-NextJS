@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PageWrapper from 'widgets/PageWrapper';
 
 const Page = () => (
@@ -61,9 +62,11 @@ const Page = () => (
           <img src="/images/icon/icon-puzzle-primary.svg" alt="item icon" />
         </div>
 
-        <button type="button" className="button btn-view-all-vacancies">
-          VIEW <span className="font-weight-bold">ALL VACANCIES</span>
-        </button>
+        <Link href="/careers">
+          <button type="button" className="button btn-view-all-vacancies">
+            VIEW <span className="font-weight-bold">ALL VACANCIES</span>
+          </button>
+        </Link>
       </div>
     </div>
   </PageWrapper>

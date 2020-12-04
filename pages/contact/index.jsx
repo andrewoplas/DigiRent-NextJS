@@ -79,7 +79,13 @@ const Page = () => {
                 <div className="footer mt-3">
                   <span className="main-desc text-primary">Get directions</span>
                   <button type="button" className="button-nav">
-                    <img src="/images/icon/icon-arrow-right-primary.svg" alt="item icon" />
+                    <a
+                      href="https://goo.gl/maps/V6yK5aLSr3jP4ZUo6"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img src="/images/icon/icon-arrow-right-primary.svg" alt="item icon" />
+                    </a>
                   </button>
                 </div>
               </div>
