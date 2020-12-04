@@ -13,7 +13,7 @@ const CookieOverlay = ({ isAccepted, onAccept }) => (
           <a className="text-primary"> Learn more</a>
         </Link>
       </p>
-      <div className="divider d-none d-sm-block" />
+      <div className="divider d-none d-md-block" />
       <button type="button" className="button" onClick={onAccept}>
         I ACCEPT
       </button>

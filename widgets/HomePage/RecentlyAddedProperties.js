@@ -7,8 +7,8 @@ const propertiesSlickSettings = {
   prevArrow: <PrevArrow />,
   slidesToShow: 3,
   slidesToScroll: 1,
-  swipe: false,
   infinite: true,
+  swipe: false,
   responsive: [
     {
       breakpoint: 1199,
@@ -25,8 +25,10 @@ const propertiesSlickSettings = {
     {
       breakpoint: 575,
       settings: {
-        slidesToShow: 1,
+        arrows: false,
         dots: true,
+        swipe: true,
+        slidesToShow: 1,
       },
     },
   ],

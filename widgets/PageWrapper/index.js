@@ -9,16 +9,10 @@ const index = ({ title, pageName, children }) => {
   const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
-    if (!window.Weglot) {
-      setLanguage(language);
+    if (window.initWeglot) {
+      window.initWeglot();
     }
-  }, [window, title]);
-
-  useEffect(() => {
-    if (window.Weglot && window.Weglot.initialized) {
-      window.Weglot.switchTo('nl');
-    }
-  }, [window, language]);
+  }, [window, title, language]);
 
   return (
     <div className="page-wrapper">
@@ -67,17 +61,18 @@ const index = ({ title, pageName, children }) => {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            setTimeout(function(){ 
-              if(typeof Weglot !== 'undefined') {
-                if(!Weglot.initialized) {
-                  Weglot.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5', hide_switcher: true});
-                  window.Weglot = Weglot;
-                  Weglot.switchTo('${language}');  
-                } else {
-                  Weglot.switchTo('${language}');  
+              window.initWeglot = function() {
+                if(typeof Weglot !== 'undefined') {
+                  if(!Weglot.initialized) {
+                    Weglot.initialize({api_key: 'wg_8fa89c444075cf79dc5825b3457396ab5', hide_switcher: true});
+                    Weglot.switchTo('${language}'); 
+                  } else {
+                    Weglot.switchTo('${language}');  
+                  }
                 }
               }
-             }, 2000);
+
+              window.initWeglot()
             `,
           }}
         ></script>

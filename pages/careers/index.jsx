@@ -66,8 +66,9 @@ const slickSettings = {
     {
       breakpoint: 575,
       settings: {
-        slidesToShow: 1,
+        arrows: false,
         dots: true,
+        slidesToShow: 1,
       },
     },
   ],

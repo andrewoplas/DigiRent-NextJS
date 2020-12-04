@@ -2,8 +2,8 @@ import { NextArrow, PrevArrow } from 'components/SlickArrows';
 import Slider from 'react-slick';
 
 const expertiseSlickSettings = {
-  nextArrow: <NextArrow responsive />,
-  prevArrow: <PrevArrow responsive />,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
   slidesToShow: 2,
   slidesToScroll: 1,
   infinite: false,
@@ -17,8 +17,9 @@ const expertiseSlickSettings = {
     {
       breakpoint: 575,
       settings: {
-        slidesToShow: 1,
+        arrows: false,
         dots: true,
+        slidesToShow: 1,
       },
     },
   ],

@@ -252,15 +252,6 @@
       }
     }
 
-    .slick-active,
-    .slick-active + .slick-active + .slick-active {
-      pointer-events: none;
-    }
-
-    .slick-active + .slick-active {
-      pointer-events: unset;
-    }
-
     @include media-breakpoint-up(xl) {
       .slick-track {
         .slick-slide,
@@ -285,6 +276,17 @@
             display: flex;
           }
         }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .slick-active,
+      .slick-active + .slick-active + .slick-active {
+        pointer-events: none;
+      }
+
+      .slick-active + .slick-active {
+        pointer-events: unset;
       }
     }
   }

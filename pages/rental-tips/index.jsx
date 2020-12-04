@@ -26,6 +26,15 @@ const slickSettings = {
   prevArrow: <PrevArrow />,
   slidesToShow: 1,
   slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 575,
+      settings: {
+        arrows: false,
+        dots: true,
+      },
+    },
+  ],
 };
 
 const Page = () => {

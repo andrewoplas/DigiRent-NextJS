@@ -12,8 +12,8 @@ const cities = [
 ];
 
 const citiesSlickSettings = {
-  nextArrow: <NextArrow responsive />,
-  prevArrow: <PrevArrow responsive />,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
   centerMode: true,
   centerPadding: '0',
   infinite: true,
@@ -23,6 +23,13 @@ const citiesSlickSettings = {
     {
       breakpoint: 991,
       settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        arrows: false,
         slidesToShow: 1,
       },
     },

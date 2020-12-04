@@ -28,8 +28,10 @@ const slickSettings = {
     {
       breakpoint: 575,
       settings: {
-        slidesToShow: 1,
+        arrows: false,
         dots: true,
+        swipe: true,
+        slidesToShow: 1,
       },
     },
   ],

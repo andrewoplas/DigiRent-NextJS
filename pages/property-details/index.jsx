@@ -41,8 +41,10 @@ const recentlyViewedSettings = {
     {
       breakpoint: 575,
       settings: {
-        slidesToShow: 1,
+        arrows: false,
         dots: true,
+        swipe: true,
+        slidesToShow: 1,
       },
     },
   ],
@@ -82,8 +84,8 @@ const PropertyDetail = () => {
       {
         breakpoint: 575,
         settings: {
-          slidesToShow: 1,
           dots: true,
+          slidesToShow: 1,
         },
       },
     ],
