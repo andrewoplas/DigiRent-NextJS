@@ -33,6 +33,10 @@
           padding-left: 2px;
           padding-right: 2px;
         }
+
+        @include breakpoint-down(420px) {
+          margin-top: 40px;
+        }
       }
 
       .slick-list {

@@ -66,16 +66,6 @@
       }
     }
 
-    @include breakpoint-down(600px) {
-      width: 225px;
-      height: 225px;
-
-      .bottom-design {
-        width: 225px;
-        height: 58px;
-      }
-    }
-
     @include breakpoint-down(420px) {
       top: -30px;
       width: 150px;
@@ -90,10 +80,6 @@
 
   .title {
     margin-top: 120px;
-
-    @include breakpoint-down(600px) {
-      margin-top: 140px;
-    }
 
     @include breakpoint-down(370px) {
       margin-top: 160px;
