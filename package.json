@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "devip": "next dev --hostname 192.168.1.2",
     "build": "next build",
     "export": "next export",
-    "start": "next start -p 8000"
+    "start": "next start",
+    "start:8000": "next start -p 8000"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
