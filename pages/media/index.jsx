@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import PageWrapper from 'widgets/PageWrapper';
 import { Reaction } from 'widgets/Reaction';
-import Modal from 'react-bootstrap/Modal';
+import { SocialMedias } from 'widgets/SocialMedias/index';
 
 const data = [
   { id: 1, image: '/images/house-sample-1.jpg', description: 'Sample' },
@@ -50,9 +51,7 @@ const Page = () => {
                       />
                     </div>
                     <div className="information mt-3">
-                      <div className="rounded-icon small">
-                        <img src="/images/icon/icon-share-primary.svg" alt="item icon" />
-                      </div>
+                      <SocialMedias />
 
                       <p className="title">Title movie</p>
 
